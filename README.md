@@ -3,6 +3,4 @@
 
 Sử dụng ngôn ngữ Java cùng với các framework mạnh mẽ sau giúp hỗ trợ xây dựng ứng dụng
 
-Hibernate
-Spring MVC
-bootstrap 4
+Hibernate, Spring MVC, Bootstrap 4
