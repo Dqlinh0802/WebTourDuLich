@@ -7,4 +7,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
-<h1>Trang chủ</h1>
+
+<h1>Trang Chủ</h1>
