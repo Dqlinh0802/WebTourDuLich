@@ -5,3 +5,8 @@
  */
 
 
+window.onload = function () {
+
+    AOS.init();
+}
+$('body').scrollspy({target: '#navbar-example'})

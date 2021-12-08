@@ -17,8 +17,8 @@
         <title>
             <tiles:insertAttribute name="title"></tiles:insertAttribute>
         </title>
-        <!--<link rel="stylesheet" href="<c:url value="/css/style.css"/>"/>-->
-        <!--<link type="text/css" rel="stylesheet" href="<tiles:getAsString name="css"/>"/>-->
+        <link rel="stylesheet" href="<c:url value="/css/style.css"/>"/>
+        <link type="text/css" rel="stylesheet" href="<tiles:getAsString name="css"/>"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
@@ -35,7 +35,12 @@
         <!--Animate On Scroll-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        
+        <!--animate.css-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
+
     </head>
     <body>
         <!--header-->
@@ -48,7 +53,7 @@
         <tiles:insertAttribute name="footer" ></tiles:insertAttribute>
 
 
-            <!--<script src="<c:url value="/js/main.js" />" ></script>-->
+            <script src="<c:url value="/js/main.js" />" ></script>
 
     </body>
 </html>

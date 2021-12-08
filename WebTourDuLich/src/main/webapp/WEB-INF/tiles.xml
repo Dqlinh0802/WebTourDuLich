@@ -18,7 +18,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     </definition>
     <definition name="index" extends="baseLayout">
         <put-attribute name="title" value="Trang chủ"></put-attribute>
-        <!--<put-attribute name="css" value="/Test3/css/trangChu.css"></put-attribute>-->
+        <put-attribute name="css" value="/WebTourDuLich/css/trangChu.css"></put-attribute>
         <put-attribute name="content" value="/WEB-INF/jsp/index.jsp"></put-attribute>
     </definition>
 </tiles-definitions>
