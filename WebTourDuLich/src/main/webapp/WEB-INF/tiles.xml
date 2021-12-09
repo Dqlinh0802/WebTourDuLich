@@ -21,4 +21,74 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="css" value="/WebTourDuLich/css/trangChu.css"></put-attribute>
         <put-attribute name="content" value="/WEB-INF/jsp/index.jsp"></put-attribute>
     </definition>
+    <definition name="dangNhap" extends="baseLayout">
+        <put-attribute name="title" value="Đăng nhập"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/dangNhapDangKy.css"></put-attribute>
+        <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="footer" value=""></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/dangNhap.jsp"></put-attribute>
+    </definition>
+    <definition name="dangKy" extends="baseLayout">
+        <put-attribute name="title" value="Đăng kí"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/dangNhapDangKy.css"></put-attribute>
+        <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="footer" value=""></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/dangKy.jsp"></put-attribute>
+    </definition>
+    <definition name="themSuaTour" extends="baseLayout">
+        <put-attribute name="title" value="Tour"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/themSuaTour.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/themSuaTour.jsp"></put-attribute>
+    </definition>
+    <definition name="dsTour" extends="baseLayout">
+        <put-attribute name="title" value="Danh sách các tour"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/dsTour.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/dsTour.jsp"></put-attribute>
+    </definition>
+    <definition name="gioHang" extends="baseLayout">
+        <put-attribute name="title" value="Giỏ hàng"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/themSuaTour.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/gioHang.jsp"></put-attribute>
+    </definition>
+    <definition name="chiTietTour" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết tour"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/chiTietTour.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/chiTietTour.jsp"></put-attribute>
+    </definition>
+    <definition name="quanLyNguoiDung" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý người dùng"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/quanLyNguoiDung.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/quanLyNguoiDung.jsp"></put-attribute>
+    </definition>
+    <definition name="khongTimThay" extends="baseLayout">
+        <put-attribute name="title" value="404"></put-attribute>
+        <put-attribute name="header" value=""></put-attribute>
+        <put-attribute name="footer" value=""></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/nangCap.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/khongTimThay.jsp"></put-attribute>
+    </definition>
+    <definition name="xemNguoiDangKyTour" extends="baseLayout">
+        <put-attribute name="title" value="Người đặt tour"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/xemNguoiDangKyTour.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/xemNguoiDangKyTour.jsp"></put-attribute>
+    </definition>
+    <definition name="chiTietDatTour" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết tour đặt"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/chiTietDatTour.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/chiTietDatTour.jsp"></put-attribute>
+    </definition>
+    <!--admin-->
+    <definition name="baseAdminLayout" template="/WEB-INF/layout/baseAdmin.jsp">
+        <put-attribute name="title" value="Quản trị hệ thống"></put-attribute>
+        <put-attribute name="left" value="/WEB-INF/layout/left.jsp"></put-attribute>
+        <put-attribute name="css" value="..."></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/layout/headerAdmin.jsp"></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/layout/footerAdmin.jsp"></put-attribute>
+        <put-attribute name="content" value="BASE"></put-attribute>
+    </definition>
+    <definition name="thongKeDoanhThuTour" extends="baseAdminLayout">
+        <put-attribute name="title" value="Quản lý người dùng"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/adminCss.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/thongKeDoanhThuTour.jsp"></put-attribute>
+    </definition>
 </tiles-definitions>

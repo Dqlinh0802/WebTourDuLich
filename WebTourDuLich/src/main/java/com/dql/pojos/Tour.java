@@ -28,10 +28,6 @@ import org.springframework.web.multipart.MultipartFile;
 @Table(name = "tour")
 public class Tour implements Serializable {
 
-    public void setTim(int tim) {
-        this.tim = tim;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")//****
@@ -222,4 +218,7 @@ public class Tour implements Serializable {
     /**
      * @param tim the tim to set
      */
+    public void setTim(int tim) {
+        this.tim = tim;
+    }
 }

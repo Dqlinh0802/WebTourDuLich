@@ -8,10 +8,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
     <div class="container header">
         <a class="navbar-brand" href="<c:url value="/" />">
-            <i class="fab fa-facebook" style="font-size: 50px"></i>
+            <img class="rounded-circle logo" src="<c:url value="/images/logo.jpg"/>" alt="Logo" style="width:50px;">
         </a>
         <div class="navbar-toggler title">Du Lich</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse"

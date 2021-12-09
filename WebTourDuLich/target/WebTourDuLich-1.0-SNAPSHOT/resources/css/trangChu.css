@@ -4,9 +4,13 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Dec 8, 2021, 6:47:55 PM
+    Created on : Sep 12, 2021, 2:43:26 PM
     Author     : Acer
 */
+
+/*=========CONTENT=========*/
+
+/*==index==*/
 #jumbotron{
     background-image: url(../images/banner.jpg);
     background-repeat: no-repeat;
@@ -146,3 +150,4 @@ a:hover{
     z-index: 5;
 }
 /*===========CONTENT===========*/
+

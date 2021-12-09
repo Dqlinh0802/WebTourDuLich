@@ -21,50 +21,50 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
  * @author Acer
  */
 @Configuration
-//@PropertySource("classpath:databases.properties")
+@PropertySource("classpath:databases.properties")
 public class HibernateConfig {
     @Autowired
     private Environment env;
     
     //Session
-//    @Bean
-//    public LocalSessionFactoryBean getSessionFactory(){
-//        LocalSessionFactoryBean factory = new LocalSessionFactoryBean();
-//        factory.setPackagesToScan("com.dql.pojos");
-//        factory.setDataSource(dataSource());
-//        factory.setHibernateProperties(hibernateProperties());
-//        return factory;
-//    }
+    @Bean
+    public LocalSessionFactoryBean getSessionFactory(){
+        LocalSessionFactoryBean factory = new LocalSessionFactoryBean();
+        factory.setPackagesToScan("com.dql.pojos");
+        factory.setDataSource(dataSource());
+        factory.setHibernateProperties(hibernateProperties());
+        return factory;
+    }
     
     //ket noi csdl
-//    @Bean
-//    public DataSource dataSource(){
-//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-//        dataSource.setDriverClassName(env.getProperty("hibernate.connection.driverClass"));
-//        dataSource.setUrl(env.getProperty("hibernate.connection.url"));
-//        dataSource.setUsername(env.getProperty("hibernate.connection.username"));
-//        dataSource.setPassword(env.getProperty("hibernate.connection.password"));
-//        
-//        return dataSource;
-//    }
+    @Bean
+    public DataSource dataSource(){
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getProperty("hibernate.connection.driverClass"));
+        dataSource.setUrl(env.getProperty("hibernate.connection.url"));
+        dataSource.setUsername(env.getProperty("hibernate.connection.username"));
+        dataSource.setPassword(env.getProperty("hibernate.connection.password"));
+        
+        return dataSource;
+    }
     
     
-//    public Properties hibernateProperties(){
-//        Properties p = new Properties();
-//        p.setProperty(org.hibernate.cfg.Environment.SHOW_SQL, env.getProperty("hibernate.showSql"));
-//        p.setProperty(org.hibernate.cfg.Environment.DIALECT, env.getProperty("hibernate.dialect"));
-//        
-//        return p;
-//    }
+    public Properties hibernateProperties(){
+        Properties p = new Properties();
+        p.setProperty(org.hibernate.cfg.Environment.SHOW_SQL, env.getProperty("hibernate.showSql"));
+        p.setProperty(org.hibernate.cfg.Environment.DIALECT, env.getProperty("hibernate.dialect"));
+        
+        return p;
+    }
     
     //tu dong/mo 
-//    @Bean
-//    public HibernateTransactionManager transactionManager(){
-//        HibernateTransactionManager h = new HibernateTransactionManager();
-//        h.setSessionFactory(getSessionFactory().getObject());
-//        
-//        return h;
-//    }
+    @Bean
+    public HibernateTransactionManager transactionManager(){
+        HibernateTransactionManager h = new HibernateTransactionManager();
+        h.setSessionFactory(getSessionFactory().getObject());
+        
+        return h;
+    }
     
 }
 

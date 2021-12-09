@@ -28,9 +28,9 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableTransactionManagement // cai nay để nó tu dong/mo sessionFactory
 @ComponentScan(basePackages = {
         "com.dql.controllers",
-//        "com.dql.repository",
-//        "com.dql.service",
-//        "com.dql.validator" 
+        "com.dql.repository",
+        "com.dql.service",
+        "com.dql.validator" 
 })// de no biet controler o dau
 public class WebConfig implements WebMvcConfigurer{
 
@@ -64,14 +64,14 @@ public class WebConfig implements WebMvcConfigurer{
     }
     
     //label Property Files
-//    @Bean
-//    public MessageSource messageSource(){
-//        ResourceBundleMessageSource source = new ResourceBundleMessageSource();
-//        
-//        source.setBasename("messages");
-//        
-//        return source;
-//    }
+    @Bean
+    public MessageSource messageSource(){
+        ResourceBundleMessageSource source = new ResourceBundleMessageSource();
+        
+        source.setBasename("messages");
+        
+        return source;
+    }
     
     //muon nhan được multipartResolver gửi lên server
     //upload dang nao cung can thang nay
