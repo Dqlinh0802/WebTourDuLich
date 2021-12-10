@@ -7,7 +7,7 @@
 
 function  themVaoGio(tourId, tenTour, gia, soCho) {
     event.preventDefault();
-    fetch("/Test3/api/gioHang", {
+    fetch("/WebTourDuLich/api/gioHang", {
         method: 'post',
         body: JSON.stringify({
             "tourId": tourId,
@@ -31,7 +31,7 @@ function  themVaoGio(tourId, tenTour, gia, soCho) {
 function xoaTour(tourId) {
     event.preventDefault();
     if (confirm("Bạn có chắc chắn xóa tour này không?") == true) {
-        fetch(`/Test3/api/themSuaTour/${tourId}`, {
+        fetch(`/WebTourDuLich/api/themSuaTour/${tourId}`, {
             method: "delete",
             headers: {
                 "Content-Type": "application/json"
@@ -48,7 +48,7 @@ function xoaTour(tourId) {
 function xoaNguoiDung(id) {
     event.preventDefault();
     if (confirm("Bạn có chắc chắn xóa người dùng này không?") == true) {
-        fetch(`/Test3/api/nguoiDungs/${id}`, {
+        fetch(`/WebTourDuLich/api/nguoiDungs/${id}`, {
             method: "delete",
             headers: {
                 "Content-Type": "application/json"
@@ -67,7 +67,7 @@ function xoaNguoiDung(id) {
 function  capNhatSLTour(obj, tourId, soCho) {
     event.preventDefault();
     if (obj.value <= soCho) {
-        fetch("/Test3/api/gioHang", {
+        fetch("/WebTourDuLich/api/gioHang", {
             method: "put",
             body: JSON.stringify({
                 "tourId": tourId,
@@ -88,7 +88,7 @@ function  capNhatSLTour(obj, tourId, soCho) {
             tongTien.innerText = data.tongTien;
         })
     } else {
-        fetch("/Test3/api/gioHang", {
+        fetch("/WebTourDuLich/api/gioHang", {
             method: "put",
             body: JSON.stringify({
                 "tourId": tourId,
@@ -116,7 +116,7 @@ function  capNhatSLTour(obj, tourId, soCho) {
 function xoaTourTrongGio(tourId) {
     event.preventDefault();
     if (confirm("Bạn có chắc chắn xóa tour này không?") == true) {
-        fetch(`/Test3/api/gioHang/${tourId}`, {
+        fetch(`/WebTourDuLich/api/gioHang/${tourId}`, {
             method: "delete",
             headers: {
                 "Content-Type": "application/json"
@@ -135,7 +135,7 @@ function xoaTourTrongGio(tourId) {
 function thanhToan(id) {
     event.preventDefault();
     if (confirm("Tiến hành thanh toán!!!") == true) {
-        fetch(`/Test3/api/thanhToan/${id}`, {
+        fetch(`/WebTourDuLich/api/thanhToan/${id}`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -153,7 +153,7 @@ function thanhToan(id) {
 function themBinhLuan(tourId, id) {
     event.preventDefault();
 
-    fetch(`/Test3/api/themBinhLuan/${id}`, {
+    fetch(`/WebTourDuLich/api/themBinhLuan/${id}`, {
         method: 'post',
         body: JSON.stringify({
             "noiDung": document.getElementById("binhLuanId").value,

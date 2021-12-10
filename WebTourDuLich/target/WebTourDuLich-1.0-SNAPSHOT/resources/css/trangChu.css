@@ -11,13 +11,13 @@ and open the template in the editor.
 /*=========CONTENT=========*/
 
 /*==index==*/
-#jumbotron{
+/*#jumbotron{
     background-image: url(../images/banner.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
     background-size: auto;
-}
+}*/
 
 #jumbotron .container {
     min-height: 600px;
@@ -29,6 +29,7 @@ and open the template in the editor.
 .info{
     color: black;
     margin-left: 50px;
+    top: 10;
 }
 .info p {
     font-size: 24px  !important; 

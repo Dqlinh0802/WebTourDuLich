@@ -15,13 +15,9 @@ and open the template in the editor.
 /*font-family: 'Pacifico', cursive;*/
 
 
-/*.container{
-    max-width: 1500px!important;
-}*/
 body{
     background-image: url(../images/watercolor.png);
     background-repeat: repeat;
-    /*background-color: #ecf0f5!important;*/
     z-index: -800;
 }
 .flex-column .rounded-circle:hover{
@@ -94,12 +90,6 @@ body{
         transform: rotate(360deg);
     }
 }
-.bg-nav{
-    background-color: #003c71!important;
-}
-.header{
-    background-color: #003c71!important;
-}
 .dropdown > a{
     color: #fff!important;
 }
@@ -124,8 +114,10 @@ body{
 }
 
 .navbar-dark .navbar-nav .nav-link{
-    font-size: 20px;
-    color: rgba(255,255,255,.5);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff!important;
     transition: color ease-out 0.2s;
 }
 .navbar-dark .navbar-nav .nav-link:hover{

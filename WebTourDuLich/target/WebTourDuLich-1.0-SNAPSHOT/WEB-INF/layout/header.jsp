@@ -10,7 +10,7 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav fixed-top">
     <div class="container header">
         <a class="navbar-brand" href="<c:url value="/" />">
             <img class="rounded-circle logo" src="<c:url value="/images/logo.jpg"/>" alt="Logo" style="width:50px;">

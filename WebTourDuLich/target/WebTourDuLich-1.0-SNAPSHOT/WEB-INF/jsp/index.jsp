@@ -8,28 +8,66 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
+<div id="jumbotron" class="carousel slide" data-ride="carousel">
 
-<div id="jumbotron">
-    <div class="container">
-        <div class="info">
-            <h1 data-aos="fade-up" data-aos-duration="500">
-                Welcome to <span class="ten-ct">DuLich</span>
-            </h1>
-            <p class="text-white" data-aos="fade-up" data-aos-duration="1000">
-                Tận hưởng những chuyến đi...
-            </p>
-            <div>
-                <a class="btn btn-success text-white" href="<c:url value="/dsTour"/>"
-                   data-aos="fade-up" data-aos-duration="1500">
-                    Xem tour
-                </a>
-                <a class="btn btn-success text-white ml-2" href="<c:url value="/dsTour"/>"
-                   data-aos="fade-up" data-aos-duration="1500">
-                    Đặt tour
-                </a>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#jumbotron" data-slide-to="0" class="active"></li>
+        <li data-target="#jumbotron" data-slide-to="1"></li>
+        <li data-target="#jumbotron" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner ">
+        <div class="carousel-item active">
+            <img src="<c:url value="./images/slider1.jpg" />" alt="Los Angeles" style="height: 700px; width: 100%; object-fit: cover">
+            <div class="carousel-caption">
+                <h3>Hà Nội</h3>
+                <p>Kiến trúc trăm tuổi và nền văn hóa phong phú!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="<c:url value="./images/slider2.jpg" />" alt="Chicago" style="height: 700px; width: 100%; object-fit: cover">
+            <div class="carousel-caption">
+                <h3>Đà Nẵng</h3>
+                <p>Thành phố của những cây cầu!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="<c:url value="./images/slider3.jpg" />" alt="New York" style="height: 700px; width: 100%; object-fit: cover">
+            <div class="carousel-caption">
+                <h3>Sài Gòn</h3>
+                <p>Hòn ngọc Viễn Đông!</p>
             </div>
         </div>
     </div>
+<!--    <div class="info">
+        <h1 data-aos="fade-up" data-aos-duration="500">
+            Welcome to <span class="ten-ct">DuLich</span>
+        </h1>
+        <p class="text-white" data-aos="fade-up" data-aos-duration="1000">
+            Tận hưởng những chuyến đi...
+        </p>
+        <div>
+            <a class="btn btn-success text-white" href="<c:url value="/dsTour"/>"
+               data-aos="fade-up" data-aos-duration="1500">
+                Xem tour
+            </a>
+            <a class="btn btn-success text-white ml-2" href="<c:url value="/dsTour"/>"
+               data-aos="fade-up" data-aos-duration="1500">
+                Đặt tour
+            </a>
+        </div>
+    </div>-->
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#jumbotron" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#jumbotron" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+
 </div>
 <!--banner-->
 
