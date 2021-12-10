@@ -7,7 +7,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="footer text-center" id="lienHe">
-    <div class="container text-black">
+    <div class="container text-white">
         <div class="row pt-5 pb-5">
             <!--cot1-->
             <div class="col-4 text-left">
@@ -27,6 +27,8 @@
                     
                 </div>
                 <div>
+                    <br />
+                    <span class="font-weight-bold text-warning">Liên hệ với chúng tôi ngay</span>
                     <br />
                     <a class="btn btn-outline-dark btn-social mx-1" href="https://www.facebook.com/dqlinh0802/"
                        data-aos="fade-up" data-aos-duration="1000">

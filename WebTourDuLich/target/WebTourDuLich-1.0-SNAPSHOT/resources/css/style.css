@@ -90,6 +90,9 @@ body{
         transform: rotate(360deg);
     }
 }
+.navbar{
+    background-color: #004c7d;
+}
 .dropdown > a{
     color: #fff!important;
 }
@@ -178,8 +181,8 @@ body{
 
 /*===========FOOTER============*/
 
-.copyright {
-    background-color: rgba(0, 0, 0, 0.9);
+.footer {
+    background-color: #004c7d;
 }
 
 .font-pacifico{
