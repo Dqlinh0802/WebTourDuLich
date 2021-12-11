@@ -152,7 +152,7 @@ function thanhToan(id) {
 
 function themBinhLuan(tourId, id) {
     event.preventDefault();
-
+    
     fetch(`/WebTourDuLich/api/themBinhLuan/${id}`, {
         method: 'post',
         body: JSON.stringify({

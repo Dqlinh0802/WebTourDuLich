@@ -39,7 +39,6 @@ public class Tour implements Serializable {
     private String anh;
     private String moTa;
     private int soCho;
-    private int tim;
 
     @Transient
     private MultipartFile file;
@@ -208,17 +207,4 @@ public class Tour implements Serializable {
         this.chiTietHoaDons = chiTietHoaDons;
     }
 
-    /**
-     * @return the tim
-     */
-    public int getTim() {
-        return tim;
-    }
-
-    /**
-     * @param tim the tim to set
-     */
-    public void setTim(int tim) {
-        this.tim = tim;
-    }
 }

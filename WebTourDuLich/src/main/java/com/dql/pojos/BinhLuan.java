@@ -24,6 +24,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "binhluan")
 public class BinhLuan implements Serializable {
+
+    
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -115,7 +117,7 @@ public class BinhLuan implements Serializable {
     public void setNguoiDung(NguoiDung nguoiDung) {
         this.nguoiDung = nguoiDung;
     }
-    
+
     
     
     

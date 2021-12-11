@@ -20,45 +20,27 @@
     <!-- The slideshow -->
     <div class="carousel-inner ">
         <div class="carousel-item active">
-            <img src="<c:url value="./images/slider1.jpg" />" alt="Los Angeles" style="height: 700px; width: 100%; object-fit: cover">
+            <img src="<c:url value="./images/slider1.jpg" />" alt="haNoi" style="height: 700px; width: 100%; object-fit: cover">
             <div class="carousel-caption">
                 <h3>Hà Nội</h3>
                 <p>Kiến trúc trăm tuổi và nền văn hóa phong phú!</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="<c:url value="./images/slider2.jpg" />" alt="Chicago" style="height: 700px; width: 100%; object-fit: cover">
+            <img src="<c:url value="./images/slider2.jpg" />" alt="daNang" style="height: 700px; width: 100%; object-fit: cover">
             <div class="carousel-caption">
                 <h3>Đà Nẵng</h3>
                 <p>Thành phố của những cây cầu!</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="<c:url value="./images/slider3.jpg" />" alt="New York" style="height: 700px; width: 100%; object-fit: cover">
+            <img src="<c:url value="./images/slider3.jpg" />" alt="saiGon" style="height: 700px; width: 100%; object-fit: cover">
             <div class="carousel-caption">
                 <h3>Sài Gòn</h3>
                 <p>Hòn ngọc Viễn Đông!</p>
             </div>
         </div>
     </div>
-<!--    <div class="info">
-        <h1 data-aos="fade-up" data-aos-duration="500">
-            Welcome to <span class="ten-ct">DuLich</span>
-        </h1>
-        <p class="text-white" data-aos="fade-up" data-aos-duration="1000">
-            Tận hưởng những chuyến đi...
-        </p>
-        <div>
-            <a class="btn btn-success text-white" href="<c:url value="/dsTour"/>"
-               data-aos="fade-up" data-aos-duration="1500">
-                Xem tour
-            </a>
-            <a class="btn btn-success text-white ml-2" href="<c:url value="/dsTour"/>"
-               data-aos="fade-up" data-aos-duration="1500">
-                Đặt tour
-            </a>
-        </div>
-    </div>-->
     <!-- Left and right controls -->
     <a class="carousel-control-prev" href="#jumbotron" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -73,25 +55,29 @@
 
 <div class="bg">
     <div class="bg-location">
-        <div class="info-location">
-            <p class="" data-aos="fade-left" data-aos-duration="1500"><span>" </span>
+        <div class="info-location" >
+            <p class="" data-aos="fade-left" data-aos-duration="1500">
+                <span>" </span>
                 Du lịch mang đến những trải nghiệm thực tế về cuộc sống,
                 về con người, về văn hóa, về ẩm thực… Bất cứ điều gì bạn quan tâm,
                 bạn yêu thích, bạn sẽ dễ dàng tìm thấy trong một chuyến đi.
                 Một vùng đất dù xa lạ hay quen thuộc đều sẽ làm tươi mới tâm hồn bạn để bạn thấy
-                cuộc sống vốn dĩ tươi đẹp cho dù bất cứ điều gì xảy ra.<span> "</span>
+                cuộc sống vốn dĩ tươi đẹp cho dù bất cứ điều gì xảy ra.
+                <span> "</span>
             </p>
+            <img  src="<c:url value="./images/duLich1.png" />" 
+                  style="position: absolute; right: 0px; bottom: 0px; transform: rotateY(180deg);">
         </div>
     </div>
 </div>
-
 <video class="video-fluid z-depth-1" data-aos="fade-up" data-aos-duration="1500"
        loop controls muted style="width: 100%; height: 720px;">
     <source src="https://res.cloudinary.com/xxxs1mplexxx/video/upload/v1633823602/y2meta.com_-_XIN_CHA%CC%80O_VIE%CC%A3%CC%82T_NAM___DU_L%E1%BB%8ACH_XUYE%CC%82N_VIE%CC%A3%CC%82T___PHI%C3%8AN_B%E1%BA%A2N_FLYCAM___HELLO_VIET_NAM_nejjkz.mp4" type="video/mp4" />
 </video>
 <div class="bg-2" >
-    <div class="info-location-2">
-        <p class="" data-aos="fade-right" data-aos-duration="1500"><span>" </span>Là một con dân nước Việt Nam nhưng mấy ai 
+    <div class="info-location-2" style="position: absolute;">
+        <p class="" data-aos="fade-right" data-aos-duration="1500">
+            <span>" </span>Là một con dân nước Việt Nam nhưng mấy ai 
             đã đặt chân hết các vùng miền đất Việt tươi đẹp.
             Nếu có cơ hội bạn hãy đến top các địa điểm du lịch 
             nổi tiếng đẹp nhất ở Việt Nam bạn sẽ biết ở Việt 
@@ -99,6 +85,7 @@
             văn hóa dân tộc được hòa quyện hoàn hảo với thiên
             nhiên đất trời<span> "</span>
         </p>
+        <img src="<c:url value="./images/duLich2.png" />" style="position: relative; right: 200px; bottom: 131px">
     </div>
 </div>
 

@@ -9,20 +9,22 @@
 
 <div id="bg-tour" class="">
     <div class="container mr-auto ml-auto">
-        <h1 class="text-center" data-aos="fade-down" data-aos-duration="1500">
-            Chi tiết tour
-        </h1>
         <div class="chi-tiet-tour">
             <div class="row">
-                <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
+                <a href="<c:url value="/dsTour"/>">
+                    <i class="fas fa-arrow-left mb-3 ml-4 text-black"></i>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
                     <c:if test="${tour.anh != null && tour.anh.startsWith('https') == true}">
-                        <img src="${tour.anh}" alt="alt"/>
+                        <img src="${tour.anh}" alt="anh" style="width: 710px; object-fit: cover"/>
                     </c:if>
                     <c:if test="${tour.anh == null || tour.anh.startsWith('https') == false}">
                         <img class="img-fluid " src="<c:url value="/images/phongCanh3.jpg"/>" alt="${tour.tenTour}"/>
                     </c:if>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <h2>${tour.tenTour}</h2>
                     <h4 class="text-pink">Mô tả </h4>
                     <p class="mo-ta">${tour.moTa}</p>
@@ -37,8 +39,8 @@
                     <c:if test="${tour.soCho > 0}">
                         <div><i class="fas fa-chair text-pink h5"></i> 
                             Số chỗ còn nhận: <span class="text-danger font-weight-bold">${tour.soCho}</span></div>
-                    </c:if>
-                    <c:if test="${tour.soCho <= 0}">
+                        </c:if>
+                        <c:if test="${tour.soCho <= 0}">
                         <div><span class="text-danger font-weight-bold">Hết chỗ</span></div>
                     </c:if>
                     <p>Giá chỉ còn: <span class="text-success giaTien font-weight-bold"> ${tour.gia} </span></p>
@@ -49,20 +51,31 @@
                     </c:if>
                 </div>
             </div>
-            <form class="binh-luan">
-                <textarea id="binhLuanId" class="form-control col-md-5" placeholder="Nhập bình luận"></textarea>
-                <c:if test="${nguoiDungDangNhap.id != null}">
+            <c:if test="${nguoiDungDangNhap.id != null}">
+                <form class="binh-luan">
+                    <textarea id="binhLuanId" class="form-control col-md-5" placeholder="Nhập bình luận"></textarea>
                     <button type="submit" onclick="themBinhLuan(${tour.tourId}, ${nguoiDungDangNhap.id})"
                             class="btn btn-info">Đăng bình luận</button>
-                </c:if>
-                <c:if test="${nguoiDungDangNhap.id == null}">
-                    <a data-toggle="popover" data-content="Bạn cần đăng nhập để bình luận"
-                       class="btn btn-info">Đăng bình luận</a>
-                </c:if>
-                <a href="<c:url value="/dsTour"/>" class="btn btn-info">
-                Quay lại xem tour
-                </a>
-            </form>
+                </form>
+            </c:if>
+            <c:if test="${nguoiDungDangNhap.id == null}">
+                <div class="col-md-8 mt-3 p-4 d-inline-flex justify-content-between border border-dark">
+                    <div class="d-inline">
+                        <h6>Đăng nhập</h6>
+                        <p>Đăng nhập để tham gia bình luận nào.</p>
+                        <br /><br />
+                        <a href="<c:url value="/dangNhap" />" class="btn btn-normal">Đăng nhập</a>
+                    </div>
+                    <span class="border-left border-dark"></span>
+                    <div class="d-inline">
+                        <h6>Đăng ký ngay</h6>
+                        <p class="mb-0">Bạn chưa có tài khoản?</p>
+                        <p>Hãy nhanh tay tạo một tài khoản ngay nào!</p>
+                        <br />
+                        <a href="<c:url value="/dangKy" />" class="btn btn-normal">Đăng ký</a>
+                    </div>
+                </div>
+            </c:if>
         </div>
         <div class="cac-binh-luan">
             <div class="bg-bl" id="binhLuanArea">
@@ -85,6 +98,9 @@
                         </div>
                     </div>
                 </c:forEach>
+            </div>
+            <div class="d-flex justify-content-end" style="margin-top: -200px">
+                <img src="<c:url value="../images/duLich3.png" />" />
             </div>
             <div class="d-flex justify-content-between page mr-sm-5 ml-sm-5">
                 <ul class="pagination">

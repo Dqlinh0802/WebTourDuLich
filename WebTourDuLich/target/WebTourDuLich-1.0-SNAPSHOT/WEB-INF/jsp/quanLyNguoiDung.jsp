@@ -17,7 +17,7 @@
             <a><a href="<c:url value="/dangKy" />"  class="btn btn-info d-inline">Thêm người dùng</a>
             <form class="form-inline d-inline-block ml-auto" action="">
                 <input class="form-control mr-sm-2" name="taiKhoan" type="search" placeholder="Nhập tên tài khoản..." aria-label="Search">
-                <input type="submit" class="btn btn-info" value="Search" />
+                <input type="submit" class="btn btn-info" value="Tìm kiếm" />
             </form>
         </div>
         <table class="table bg-light">

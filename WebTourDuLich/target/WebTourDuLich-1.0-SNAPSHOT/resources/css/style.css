@@ -16,9 +16,9 @@ and open the template in the editor.
 
 
 body{
-    background-image: url(../images/watercolor.png);
     background-repeat: repeat;
-    z-index: -800;
+    z-index: 800;
+    background-color: #f4f5f6!important;
 }
 .flex-column .rounded-circle:hover{
     background-color: #f2c26f;
@@ -81,6 +81,13 @@ body{
     color: #fff!important;
     background-color: black!important;
 }
+.btn-outline-dark{
+    color: #000!important;
+}
+.btn-outline-dark:hover{
+    color: #fea4a5!important;
+    border-color: #fea4a5!important;
+}
 /*==============HEADER=========*/
 .logo{
     animation: logo 2.5s cubic-bezier(0.8, -0.84, 0.22, 1.71) infinite;
@@ -91,7 +98,7 @@ body{
     }
 }
 .navbar{
-    background-color: #004c7d;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 .dropdown > a{
     color: #fff!important;
@@ -103,15 +110,15 @@ body{
     box-shadow: 0px 4px 3px 2px rgb(0 0 0 / 55%);
 }
 .fas{
-    color: white;
-    font-size: 36px;    
+    color: #000;
+    font-size: 36px;  
 }
 .fas:hover{
-    color: #f2c26f;
+    color: white ;
 }
 .title{
     font-family: 'Sansita Swashed', cursive;
-    color: #f2c26f!important;
+    color:#000!important;
     font-size: 30px!important;
     border: none!important;
 }
@@ -120,11 +127,11 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 16px;
-    color: #fff!important;
+    color: #000!important;
     transition: color ease-out 0.2s;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
-    color: #f2c26f!important;
+    color: #fff!important;
     transition: color ease-in 0.2s;
 }
 .navbar-dark .nav-item #navbarDropdownMenuLink{
@@ -182,7 +189,8 @@ body{
 /*===========FOOTER============*/
 
 .footer {
-    background-color: #004c7d;
+    /*background-color: #004c7d;*/
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 
 .font-pacifico{

@@ -37,13 +37,13 @@
                         </a>
                         <div class="dropdown-menu text-center quan-ly" aria-labelledby="navbarDropdownMenuLink2">
                             <div>
-                                <a class="btn btn-info mr-auto ml-auto mb-2" href="<c:url value="/nhanVien/themSuaTour"/>">Thêm tour</a>
+                                <a class="btn btn-outline-dark mr-auto ml-auto mb-2" href="<c:url value="/nhanVien/themSuaTour"/>">Thêm tour</a>
                             </div> 
                             <div>
-                                <a class="btn btn-info mr-auto ml-auto mb-2"  href="<c:url value="/nhanVien/xemNguoiDangKyTour"/>">Đặt tour</a>
+                                <a class="btn btn-outline-dark mr-auto ml-auto mb-2"  href="<c:url value="/nhanVien/xemNguoiDangKyTour"/>">Đặt tour</a>
                             </div>
                             <div>
-                                <a class="btn btn-info mr-auto ml-auto" href="<c:url value="/nhanVien/nguoiDungs"/>">Người dùng</a>
+                                <a class="btn btn-outline-dark mr-auto ml-auto" href="<c:url value="/nhanVien/nguoiDungs"/>">Người dùng</a>
                             </div>
                         </div>
                     </div>
@@ -61,12 +61,12 @@
 
             </ul>
             <div class="nav-item dropdown d-flex">
-                    <div class="item-gio-hang">
-                        <a class="gioHang" href="<c:url value="/gioHang" />">
-                            <i class="fas fa-cart-arrow-down"></i>
-                            <span class="badge badge-danger" id="slTour">${demSLTour}</span>
-                        </a>
-                    </div>
+                <div class="item-gio-hang">
+                    <a class="gioHang" href="<c:url value="/gioHang" />">
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <span class="badge badge-danger" id="slTour">${demSLTour}</span>
+                    </a>
+                </div>
                 <c:if test="${pageContext.request.userPrincipal.name == null}">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,24 +77,43 @@
                         <div>
                             Chưa có tài khoản? <a href="<c:url value="/dangKy" />">Đăng kí</a> ngay
                         </div>
-
                     </div>
                 </c:if>
                 <c:if test="${pageContext.request.userPrincipal.name != null}">
                     <div class="ml-3 d-flex align-items-center">
-                        <c:if test="${nguoiDungDangNhap.anh != null && nguoiDungDangNhap.anh.startsWith('https') == true}">
-                            <img class="btn btn-success" src="<c:url value="${nguoiDungDangNhap.anh}"/>"
-                                 alt="${pageContext.request.userPrincipal.name}" />
-                        </c:if>
-                        <c:if test="${nguoiDungDangNhap.anh == null || nguoiDungDangNhap.anh.startsWith('https') != true}">
-                            <div class="nguoi-dung">
-                                <i class="fas fa-user"></i>
-                                <span class="ml-2">${pageContext.request.userPrincipal.name}</span>
+                        <div class="nav-item dropdown d-flex">
+                            <c:if test="${nguoiDungDangNhap.anh != null && nguoiDungDangNhap.anh.startsWith('https') == true}">
+                                <a class="nav-link" 
+                                   href="#" id="navbarDropdownMenuLink2"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="btn btn-outline-dark dropdown-toggle" src="<c:url value="${nguoiDungDangNhap.anh}"/>"
+                                         alt="${pageContext.request.userPrincipal.name}"/>
+                                </a>
+                            </c:if>
+                            <c:if test="${nguoiDungDangNhap.anh == null || nguoiDungDangNhap.anh.startsWith('https') != true}">
+                                <div class="nguoi-dung">
+                                    <i class="fas fa-user"></i>
+                                    <span class="ml-2">${pageContext.request.userPrincipal.name}</span>
+                                </div>
+                            </c:if>
+                            <div class="dropdown-menu quan-ly text-center" aria-labelledby="navbarDropdownMenuLink2">
+                                <div>
+                                    <span class="font-weight-bold">${pageContext.request.userPrincipal.name}</span>
+                                    <c:if test="${nguoiDungDangNhap.vaiTro != null && nguoiDungDangNhap.vaiTro.startsWith('ROLE_A') == true}">
+                                        <span>(Quản lý)</span>
+                                    </c:if>
+                                    <c:if test="${nguoiDungDangNhap.vaiTro != null && nguoiDungDangNhap.vaiTro.startsWith('ROLE_M') == true}">
+                                        <span>(Nhân viên)</span>
+                                    </c:if>
+                                    <c:if test="${nguoiDungDangNhap.vaiTro != null && nguoiDungDangNhap.vaiTro.startsWith('ROLE_U') == true}">
+                                        <span>(Khách hàng)</span>
+                                    </c:if>
+                                </div>
+                                <div >
+                                    <a class="btn btn-danger" href="<c:url value="/logout" />">Đăng xuất</a>
+                                </div>
                             </div>
-                        </c:if>
-                    </div>
-                    <div class="ml-2">
-                        <a class="btn btn-danger text-white" href="<c:url value="/logout" />">Đăng xuất</a>
+                        </div>
                     </div>
                 </c:if>
             </div>
