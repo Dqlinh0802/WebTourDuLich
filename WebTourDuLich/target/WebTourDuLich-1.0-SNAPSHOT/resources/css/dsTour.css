@@ -16,7 +16,11 @@ and open the template in the editor.
     padding-bottom: 5px;
     font-family: 'Mali', cursive;
 }
- .so-luong-tour{
+.info-sec .them-tour i{
+    font-size: 18px;
+    color: #fea4a5 !important;
+}
+.so-luong-tour{
 
     color: #00c1de;
     font-size: 20px;
@@ -35,11 +39,28 @@ and open the template in the editor.
     padding-bottom: 30px;
 }
 .row .box-tour:hover{
-    box-shadow: 0 10px 20px rgb(0 0 0 / 50%), 0 15px 15px rgb(0 0 0 / 50%);
+    box-shadow: 0px 0px 20px 7px rgb(0 0 0 / 30%), 0 15px 15px rgb(0 0 0 / 30%);
+    background-color: #dbe9f5 !important;
+    cursor: pointer;
 }
 .row .box-tour{
     background-color: #fff;
     box-shadow: 0 10px 20px rgb(0 0 0 / 10%), 0 15px 15px rgb(0 0 0 / 10%);
+}
+.row .vi-tri{
+    background: rgba(0,70,126,0.8);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.vi-tri span {
+    color: #fff;
+    font-weight: bold;
+}
+.vi-tri span i{
+    color: orange !important;
+    font-size: 18px;
+    margin-right: 5px;
 }
 .row a{
     text-decoration: none;

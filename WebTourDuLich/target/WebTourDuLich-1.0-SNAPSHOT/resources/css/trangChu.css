@@ -51,10 +51,6 @@ h1 {
 .info-location p{
     line-height: 34px;
 }
-p span {
-    color: red;
-    font-size: 26px;
-}
 .info .ten-ct {
     color: #f2c26f;
 }
@@ -87,13 +83,14 @@ p span {
     margin: 0 auto 0 200px;
     font-family: 'Mali', cursive;
 }
-.row img{
+.box-images .row img{
     border-radius: 10px;
 }
-.row img:hover{
+.box-images .row img:hover{
     cursor: pointer;
-    box-shadow: 0 10px 20px rgb(0 0 0 / 50%), 0 15px 15px rgb(0 0 0 / 50%);
+    box-shadow: 0px 0px 20px 7px rgb(0 0 0 / 30%), 0 15px 15px rgb(0 0 0 / 30%);
     transition: box-shadow ease-in-out 0.2s;
+    transform: scale(1.05);
 }
 h4.text-white {
     margin-top: -50px;
@@ -103,7 +100,7 @@ h3{
     font-size: 30px!important;
     font-family: 'Mali', cursive;
 }
-.row > div{
+.box-images .row > div{
     margin-bottom: 30px;
 }
 .row .col-md-8 img{

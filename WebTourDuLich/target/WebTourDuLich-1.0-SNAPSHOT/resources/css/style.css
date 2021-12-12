@@ -88,15 +88,27 @@ body{
     color: #fea4a5!important;
     border-color: #fea4a5!important;
 }
+.btn-normal{
+    font-family: sans-serif !important;
+    color: #000 !important;
+    font-size: 16px !important;
+    border: 1px solid #3f4f5f !important;
+    border-radius: 0px !important;
+    padding: 6px 26px !important;
+}
+.btn-normal:hover{
+    color: #fea4a5 !important;
+    border-color: #fea4a5 !important;
+}
 /*==============HEADER=========*/
-.logo{
+/*.logo{
     animation: logo 2.5s cubic-bezier(0.8, -0.84, 0.22, 1.71) infinite;
 }
 @keyframes logo{
     to {
         transform: rotate(360deg);
     }
-}
+}*/
 .navbar{
     background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
@@ -198,5 +210,11 @@ body{
 }
 .nav-link{
     padding: 10px 40px!important;
+}
+.footer .ma-so{
+    color: #a0a0a5;
+}
+.font-mali{
+    font-family: 'Mali', cursive;
 }
 /*=============FOOTER===========*/

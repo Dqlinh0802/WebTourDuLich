@@ -90,7 +90,7 @@
 </div>
 
 
-<div class="container">
+<div class="container box-images">
     <h3 class="" data-aos="fade-right" data-aos-duration="2000">Các điểm đến nổi bật</h3>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-8" data-aos="fade-up-right" data-aos-duration="1800">
