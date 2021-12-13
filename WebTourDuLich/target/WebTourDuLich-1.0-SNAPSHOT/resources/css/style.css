@@ -127,6 +127,7 @@ body{
 }
 .fas:hover{
     color: white ;
+    text-shadow: -2px 2px 0px #6abfa5;
 }
 .title{
     font-family: 'Sansita Swashed', cursive;
@@ -145,12 +146,15 @@ body{
 .navbar-dark .navbar-nav .nav-link:hover{
     color: #fff!important;
     transition: color ease-in 0.2s;
+    text-shadow: -2px 2px 0px #6abfa5;
 }
 .navbar-dark .nav-item #navbarDropdownMenuLink{
     font-size: 24px;
+    color: #000!important;
 }
 .navbar-dark .nav-item #navbarDropdownMenuLink:hover{
-    color: #00c1de!important;
+    color: #fff!important;
+    text-shadow: -2px 2px 0px #6abfa5;
 }
 .item-gio-hang{
     padding-top: 12px;
@@ -218,3 +222,28 @@ body{
     font-family: 'Mali', cursive;
 }
 /*=============FOOTER===========*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: transparent!important;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+}
+#myBtn i {
+  color: #ff9a9e!important;
+}
+#myBtn i:hover {
+  text-shadow: none;
+  color: #f9585e!important;
+}
+html{
+    scroll-behavior: smooth;
+}

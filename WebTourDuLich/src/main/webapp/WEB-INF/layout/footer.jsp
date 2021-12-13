@@ -72,6 +72,9 @@
             <div class="col-5">
                 <img src="<c:url value="/images/duLich5.png"/>" alt="alt"  style="width:400px;"/>
             </div>
+            <button  id="myBtn" onclick="topFunction()">
+                <i class="fas fa-arrow-circle-up"></i>
+            </button>
         </div>
     </div>
     <div class="copyright py-4 text-center text-black">
@@ -79,3 +82,23 @@
     </div>
 </div>
 
+<script>
+    var mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function () {
+        scrollFunction();
+    };
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
