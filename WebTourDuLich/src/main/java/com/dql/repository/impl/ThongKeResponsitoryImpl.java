@@ -9,6 +9,7 @@ import com.dql.pojos.ChiTietHoaDon;
 import com.dql.pojos.HoaDon;
 import com.dql.pojos.Tour;
 import com.dql.repository.ThongKeRepository;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -54,8 +55,8 @@ public class ThongKeResponsitoryImpl implements ThongKeRepository {
         query.multiselect(rootT.get("tourId"), rootT.get("tenTour"),
                 builder.sum(builder.prod(rootC.get("soLuong"), rootC.get("gia")))); 
         
-//        if (tenTour != null && tenTour.trim().isEmpty()) {
-//            predicates.add(builder.like(rootT.get("tenTour"), String.format("%%%s%%", tenTour)));
+//        if (ngay != null) {
+//            predicates.add(builder.equal(rootH.get("ngayMua").get, ngay));
 //        }
         
         if (ngayBD != null) {

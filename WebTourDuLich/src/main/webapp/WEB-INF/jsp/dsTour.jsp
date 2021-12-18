@@ -46,13 +46,14 @@
                                 <div class="box-tour">
                                     <a href="<c:url value="/chiTietTour/${pro.tourId}"/>">
                                         <div class="position-relative">
-
+                                            <div id="image">
                                             <c:if test="${pro.anh!= null && pro.anh.startsWith('https') == true}">
                                                 <img class="img-fluid " src="<c:url value="${pro.anh}"/>" alt="${pro.tenTour}"/>
                                             </c:if>
                                             <c:if test="${pro.anh == null || pro.anh.startsWith('https') == false}">
                                                 <img class="img-fluid " src="<c:url value="/images/macDinh.gif"/>" alt="${pro.tenTour}"/>
                                             </c:if>
+                                            </div>
                                             <div  class="vi-tri">
                                                 <div class="px-3">
                                                     <span><i class="fas fa-map-marker-alt"></i>${pro.tenTour}</span>

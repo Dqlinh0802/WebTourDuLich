@@ -15,7 +15,7 @@ import org.springframework.validation.Validator;
  * @author Acer
  */
 @Component
-public class NguoiDungValidator implements Validator{
+public class NguoiDungValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> type) {
@@ -26,11 +26,32 @@ public class NguoiDungValidator implements Validator{
     public void validate(Object o, Errors errors) {
         NguoiDung n = (NguoiDung) o;
         //rejectValue name nó biet truong nào bị lỗi
-        if(n.getTaiKhoan()== "" || n.getTaiKhoan() == null)
+        if (n.getTaiKhoan().equals("")) {
             errors.rejectValue("taiKhoan", "nguoidung.errNull");
-
-        if (!n.getMatKhau().equals(n.getXacThucMatKhau()))
+        }
+        if (n.getEmail().equals("")) {
+            errors.rejectValue("email", "nguoidung.errNull");
+        }
+        if (n.getHo().equals("")) {
+            errors.rejectValue("ho", "nguoidung.errNull");
+        }
+        if (n.getTen().equals("")) {
+            errors.rejectValue("ten", "nguoidung.errNull");
+        }
+        if (n.getSdt().equals("")) {
+            errors.rejectValue("sdt", "nguoidung.errNull");
+        }
+        if (n.getMatKhau().equals("")) {
+            n.setMatKhau("");
+            errors.rejectValue("matKhau", "nguoidung.errNull");
+        }
+        if (n.getXacThucMatKhau().equals("")) {
+            n.setXacThucMatKhau("");
+            errors.rejectValue("xacThucMatKhau", "nguoidung.errNull");
+        }
+        if (!n.getMatKhau().equals(n.getXacThucMatKhau())) {
             errors.rejectValue("xacThucMatKhau", "nguoidung.errMatKhau");
+        }
     }
-    
+
 }

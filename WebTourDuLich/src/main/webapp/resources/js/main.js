@@ -132,27 +132,32 @@ function xoaTourTrongGio(tourId) {
         })
     }
 }
-function thanhToan(id) {
+function thanhToan(id, soLuongTour) {
     event.preventDefault();
-    if (confirm("Tiến hành thanh toán!!!") == true) {
-        fetch(`/WebTourDuLich/api/thanhToan/${id}`, {
-            method: "post",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(function (res) {
-            return res.json()
-        }).then(function (code) {
-            console.info(code);
-            location.reload();
-            
-        })
+    if (soLuongTour != 0) {
+        if (confirm("Tiến hành thanh toán!!!") == true) {
+            fetch(`/WebTourDuLich/api/thanhToan/${id}`, {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(function (res) {
+                return res.json()
+            }).then(function (code) {
+                console.info(code);
+                location.reload();
+
+            })
+        }
     }
+    else
+        alert("Bạn chưa đặt tour nào!!!");
+
 }
 
 function themBinhLuan(tourId, id) {
     event.preventDefault();
-    
+
     fetch(`/WebTourDuLich/api/themBinhLuan/${id}`, {
         method: 'post',
         body: JSON.stringify({

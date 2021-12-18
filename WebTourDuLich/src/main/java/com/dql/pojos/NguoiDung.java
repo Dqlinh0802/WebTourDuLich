@@ -15,6 +15,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -34,11 +36,17 @@ public class NguoiDung implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotNull(message = "{nguoidung.errNull}")
     private String ho;
+    @NotNull(message = "{nguoidung.errNull}")
     private String ten;
     private String email;
+    @NotNull(message = "{nguoidung.errNull}")
+    @Size(max=13, message = "{nguoidung.errLen}")
     private String sdt;
+    @NotNull(message = "{nguoidung.errNull}")
     private String taiKhoan;
+    @NotNull(message = "{nguoidung.errNull}")
     private String matKhau;
     private String anh;
     private String diaChi;

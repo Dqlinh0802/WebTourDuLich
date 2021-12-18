@@ -9,8 +9,9 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container justify-content-start">
-        <a class="navbar-brand" href="#">
-            <img class="rounded-circle" src="<c:url value="/images/logo.jpg" />" style="width: 50px; height: 50px;" alt="logo" />
+        <a class="navbar-brand" href="<c:url value="/" />">
+            <img class="logo" src="<c:url value="/images/logoText.png"/>"
+                 alt="Logo" style="width:100px;">
         </a>
         <ul class="navbar-nav">
             <li class="nav-item">

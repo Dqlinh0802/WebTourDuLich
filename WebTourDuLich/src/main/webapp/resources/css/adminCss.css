@@ -46,3 +46,6 @@ form{
         transform: rotate(360deg);
     }
 }
+footer {
+    background-color: #ff9a9e; 
+}

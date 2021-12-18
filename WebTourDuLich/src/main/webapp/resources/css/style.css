@@ -149,7 +149,8 @@ body{
     text-shadow: -2px 2px 0px #6abfa5;
 }
 .navbar-dark .nav-item #navbarDropdownMenuLink{
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 500;
     color: #000!important;
 }
 .navbar-dark .nav-item #navbarDropdownMenuLink:hover{

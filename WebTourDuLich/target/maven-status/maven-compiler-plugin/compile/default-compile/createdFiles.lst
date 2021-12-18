@@ -44,6 +44,7 @@ com\dql\repository\impl\NguoiDatTourRepositoryImpl.class
 com\dql\configs\WebConfig.class
 com\dql\repository\impl\TourRepositoryImpl.class
 com\dql\service\impl\BinhLuanServiceImpl.class
+com\dql\validator\WebAppValidator.class
 com\dql\configs\XuLyDangXuat.class
 com\dql\controllers\GioHangController.class
 com\dql\repository\impl\BinhLuanRepositoryImpl.class

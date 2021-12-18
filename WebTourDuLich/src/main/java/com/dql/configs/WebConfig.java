@@ -5,12 +5,18 @@
  */
 package com.dql.configs;
 
+import com.dql.validator.NguoiDungValidator;
+import com.dql.validator.WebAppValidator;
+import java.util.HashSet;
+import java.util.Set;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.validation.Validator;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -80,5 +86,32 @@ public class WebConfig implements WebMvcConfigurer{
         CommonsMultipartResolver resolver = new CommonsMultipartResolver();
         resolver.setDefaultEncoding("UTF-8");
         return resolver;
+    }
+
+    //Bean Validator
+    @Override
+    public Validator getValidator() {
+        return validator();
+    }
+    
+    //Bean Validator
+    @Bean
+    public LocalValidatorFactoryBean validator() {
+        LocalValidatorFactoryBean b = new LocalValidatorFactoryBean();
+        
+        b.setValidationMessageSource(messageSource());
+        return b;
+    }
+    
+    @Bean
+    public WebAppValidator nguoiDungValidator() {
+        Set<Validator> springValidators = new HashSet<>();
+        
+        springValidators.add(new NguoiDungValidator()); 
+        
+        WebAppValidator v = new WebAppValidator();
+        v.setSpringValidators(springValidators);
+        
+        return v;
     }
 }

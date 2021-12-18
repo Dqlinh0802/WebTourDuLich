@@ -8,6 +8,7 @@ package com.dql.controllers;
 import com.dql.pojos.NguoiDung;
 import com.dql.service.NguoiDungService;
 import com.dql.validator.NguoiDungValidator;
+import com.dql.validator.WebAppValidator;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class NguoiDungController {
 
     @Autowired
-    private NguoiDungValidator nguoiDungValidator;
+    private WebAppValidator nguoiDungValidator;
 
     @Autowired
     private NguoiDungService userDetailsService;
@@ -60,17 +61,19 @@ public class NguoiDungController {
             @ModelAttribute(value = "nguoiDung") @Valid NguoiDung nguoiDung,
             BindingResult result) {
         
-        String err = "";
+        
         if (!result.hasErrors()) {
+            String err = "";
             if (this.userDetailsService.themSuaNguoiDung(nguoiDung) == true) {
                 return "redirect:/dangNhap";
             } else {
-                err = "Đã có lỗi xảy ra";
+                err = "Chưa có ảnh đại diện";
+                nguoiDung.setMatKhau("");
+                nguoiDung.setXacThucMatKhau("");
+                model.addAttribute("err", err);
             }
-        } else {
-            err = "Error";
-        }
-        model.addAttribute("err", err);
+        } 
+        
         return "dangKy";
 
     }

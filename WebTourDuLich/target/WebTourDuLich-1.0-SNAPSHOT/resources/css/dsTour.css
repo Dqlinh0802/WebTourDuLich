@@ -65,6 +65,11 @@ and open the template in the editor.
 .row a{
     text-decoration: none;
 }
+.row #image {
+    height: 197px;
+    width: 350px;
+    background: #ff9a9e;
+}
 .row .img-fluid{
     height: 197px;
     width: 350px;
