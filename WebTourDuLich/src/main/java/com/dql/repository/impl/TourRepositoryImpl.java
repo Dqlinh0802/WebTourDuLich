@@ -33,7 +33,7 @@ public class TourRepositoryImpl implements TourRepository{
     private LocalSessionFactoryBean sessionFactory;
     
     @Override
-    public List<Tour> getTours(String kw, int page, int gia) {
+    public List<Tour> getTours(String kw, int page, int giaTu, int den) {
         Session session = this.sessionFactory.getObject().getCurrentSession();  
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Tour> query = builder.createQuery(Tour.class);
@@ -48,8 +48,9 @@ public class TourRepositoryImpl implements TourRepository{
                     String.format("%%%s%%", kw)));
             
         }
-        if(gia != -1){
-            predicates.add(builder.lessThanOrEqualTo(root.get("gia"), gia));
+        if(giaTu != -1){
+            predicates.add(builder.lessThanOrEqualTo(root.get("gia"), den));
+            predicates.add(builder.greaterThanOrEqualTo(root.get("gia"), giaTu));
             query = query.orderBy(builder.asc(root.get("gia")));
         }
         query = query.where(predicates.toArray(new Predicate[]{}));

@@ -24,11 +24,11 @@
                     Giá
                 </a>
                 <div id="gia" class="dropdown-menu text-center p-3" aria-labelledby="dropdownGia">
-                    <a class="btn btn-normal mb-2" href="<c:url value="/dsTour" />?gia=400000">Dưới 400,000</a>
-                    <a class="btn btn-normal mb-2" href="<c:url value="/dsTour" />?gia=600000">Từ 400,000 - 600,000</a>
+                    <a class="btn btn-normal mb-2" href="<c:url value="/dsTour" />?tu=0&den=400000">Dưới 400,000</a>
+                    <a class="btn btn-normal mb-2" href="<c:url value="/dsTour" />?tu=400000&den=600000">Từ 400,000 - 600,000</a>
                     <br/>
-                    <a class="btn btn-normal" href="<c:url value="/dsTour" />?gia=1000000">Từ 600,000 - 1000,000</a>
-                    <a class="btn btn-normal" href="<c:url value="/dsTour" />?gia=999999999">Trên 1000,000</a>
+                    <a class="btn btn-normal" href="<c:url value="/dsTour" />?tu=600000&den=1000000">Từ 600,000 - 1000,000</a>
+                    <a class="btn btn-normal" href="<c:url value="/dsTour" />?tu=600000&den=99999999">Trên 1000,000</a>
                 </div>
             <sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_MANAGE')">
                 <div class="d-flex justify-content-end my-3 them-tour">

@@ -13,7 +13,7 @@ import java.util.List;
  * @author Acer
  */
 public interface TourService {
-    List<Tour> getTours(String kw, int page, int gia);
+    List<Tour> getTours(String kw, int page, int giaTu, int den);
     Tour layTourId(int tourId);
     long slTour();
     boolean xoaTour(int tourId);

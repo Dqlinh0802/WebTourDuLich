@@ -24,6 +24,9 @@ h1{
     text-decoration: none;
     text-shadow: -2px 2px 0px #6abfa5;
 }
+.de-muc{
+    text-shadow: -2px 2px 0px #6abfa5;
+}
 .bg-tb{
     background-color: #f27979!important;
 }

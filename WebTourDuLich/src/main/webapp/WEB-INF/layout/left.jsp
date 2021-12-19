@@ -10,7 +10,7 @@
 <nav class="navbar">
     <!-- Links -->
     <div>
-        <h3 class="text-white">Thống kê</h3>
+        <h3 class="text-white de-muc">Thống kê</h3>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link p-0 pt-3" href="<c:url value="/admin/thongKeDoanhThuTour"/>">Doanh thu theo tour</a>
@@ -21,7 +21,7 @@
         </ul>
     </div>
     <div class="mt-5">
-        <h3 class="text-white">Quản lý</h3>
+        <h3 class="text-white de-muc">Quản lý</h3>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link p-0 pt-3" href="<c:url value="/nhanVien/themSuaTour"/>">Thêm tour</a>
