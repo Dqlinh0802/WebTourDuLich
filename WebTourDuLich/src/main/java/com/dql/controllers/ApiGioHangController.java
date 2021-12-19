@@ -40,7 +40,7 @@ public class ApiGioHangController {
 
     @GetMapping("/api/tours")
     public ResponseEntity<List<Tour>> dsTours() {
-        List<Tour> tours = this.tourService.getTours("", 1);
+        List<Tour> tours = this.tourService.getTours("", 1, -1);
 
         return new ResponseEntity<>(tours, HttpStatus.OK);
     }

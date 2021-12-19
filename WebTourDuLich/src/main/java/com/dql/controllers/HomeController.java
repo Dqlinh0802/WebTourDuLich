@@ -48,7 +48,8 @@ public class HomeController {
         
         //co thì lấy k có thì lấy 1
         int page = Integer.parseInt(params.getOrDefault("page", "1"));
-        model.addAttribute("tours", this.tourService.getTours(params.get("kw"), page));
+        int gia = Integer.parseInt(params.getOrDefault("gia", "-1"));
+        model.addAttribute("tours", this.tourService.getTours(params.get("kw"), page, gia));
         model.addAttribute("slTour", this.tourService.slTour());
         
         return "dsTour";

@@ -81,7 +81,7 @@ public class ThongKeResponsitoryImpl implements ThongKeRepository {
 
         Root rootT = query.from(Tour.class);
         query = query.select(rootT);
-        
+        query = query.orderBy(builder.desc(rootT.get("soCho")));
         Query q = session.createQuery(query); 
         int maxPage = 10;
         q.setMaxResults(maxPage);

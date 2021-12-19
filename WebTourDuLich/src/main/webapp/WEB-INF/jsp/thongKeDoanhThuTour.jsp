@@ -22,7 +22,7 @@
         <input type="submit" value="Thống kê" class="btn btn-info"/>
     </form>
 </div>
-<div>
+<div style="margin-left: auto; margin-right: auto">
     <canvas id="myChart"></canvas>
 </div>
 <table class="table">

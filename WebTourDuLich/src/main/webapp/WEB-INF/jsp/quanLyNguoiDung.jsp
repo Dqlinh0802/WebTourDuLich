@@ -75,7 +75,7 @@
                                 <a  href="javascript:;" onclick="xoaNguoiDung(${nguoiDung.id})">
                                     <input type="button" value="Xóa" class="btn btn-danger"/>
                                 </a>
-                                <a href="<c:url value="/dangKy/?id=${nguoiDung.id}" />">
+                                <a href="<c:url value="/khongTimThay" />">
                                     <input type="button" value="Sửa" class="btn btn-success"/>
                                 </a>
                             </td>

@@ -29,9 +29,9 @@ public class TourServiceImpl implements TourService {
     private Cloudinary cloudinary;
 
     @Override
-    public List<Tour> getTours(String kw, int page) {
+    public List<Tour> getTours(String kw, int page, int gia) {
 
-        return this.tourRepository.getTours(kw, page);
+        return this.tourRepository.getTours(kw, page, gia);
     }
 
     @Override

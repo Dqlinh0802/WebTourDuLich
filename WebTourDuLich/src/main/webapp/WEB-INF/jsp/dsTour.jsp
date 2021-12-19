@@ -11,11 +11,25 @@
 <section class="">
     <div class="container info-sec">
         <div>
-            <h3 id="danh-sach-tour" data-aos="fade-right" data-aos-duration="1500">Danh sách các tour</h3>
+            <h3 id="danh-sach-tour" data-aos="fade-right" data-aos-duration="1500">
+                Danh sách các tour
+            </h3>
             <form class="form-inline row container pr-xs-0" action="">
-                <input class="form-control col-xs-1 col-md-4 mr-xs-2 mr-sm-1 mb-2" name="kw" type="search" placeholder="Bạn muốn đi đâu?" aria-label="Search">
+                <input class="form-control col-xs-1 col-md-4 mr-xs-2 mr-sm-1 mb-2" 
+                       name="kw" type="search" placeholder="Bạn muốn đi đâu?" aria-label="Search">
                 <input type="submit" class="btn btn-warning mb-2 font-weight-bold" value="Tìm kiếm"/>
             </form>
+                <a class="btn btn-normal dropdown-toggle mb-4" href="#" id="dropdownGia"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Giá
+                </a>
+                <div id="gia" class="dropdown-menu text-center p-3" aria-labelledby="dropdownGia">
+                    <a class="btn btn-normal mb-2" href="<c:url value="/dsTour" />?gia=400000">Dưới 400,000</a>
+                    <a class="btn btn-normal mb-2" href="<c:url value="/dsTour" />?gia=600000">Từ 400,000 - 600,000</a>
+                    <br/>
+                    <a class="btn btn-normal" href="<c:url value="/dsTour" />?gia=1000000">Từ 600,000 - 1000,000</a>
+                    <a class="btn btn-normal" href="<c:url value="/dsTour" />?gia=999999999">Trên 1000,000</a>
+                </div>
             <sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_MANAGE')">
                 <div class="d-flex justify-content-end my-3 them-tour">
                     <a class="btn btn-normal" href="<c:url value="/nhanVien/themSuaTour"/>">
@@ -33,7 +47,9 @@
                 <ul class="pagination">
                     <c:forEach begin="1" end="${Math.ceil(slTour/18)}" var="i">
                         <li class="page-item">
-                            <a class="page-link" href="<c:url value="/dsTour" />?page=${i}#danh-sach-tour">${i}</a>
+                            <a class="page-link" 
+                               href="<c:url value="/dsTour" />?page=${i}#danh-sach-tour">${i}
+                            </a>
                         </li>
                     </c:forEach> 
                 </ul>
@@ -47,16 +63,20 @@
                                     <a href="<c:url value="/chiTietTour/${pro.tourId}"/>">
                                         <div class="position-relative">
                                             <div id="image">
-                                            <c:if test="${pro.anh!= null && pro.anh.startsWith('https') == true}">
-                                                <img class="img-fluid " src="<c:url value="${pro.anh}"/>" alt="${pro.tenTour}"/>
-                                            </c:if>
-                                            <c:if test="${pro.anh == null || pro.anh.startsWith('https') == false}">
-                                                <img class="img-fluid " src="<c:url value="/images/macDinh.gif"/>" alt="${pro.tenTour}"/>
-                                            </c:if>
+                                                <c:if test="${pro.anh!= null && pro.anh.startsWith('https') == true}">
+                                                    <img class="img-fluid " src="<c:url value="${pro.anh}"/>"
+                                                         alt="${pro.tenTour}"/>
+                                                </c:if>
+                                                <c:if test="${pro.anh == null || pro.anh.startsWith('https') == false}">
+                                                    <img class="img-fluid " src="<c:url value="/images/macDinh.gif"/>"
+                                                         alt="${pro.tenTour}"/>
+                                                </c:if>
                                             </div>
                                             <div  class="vi-tri">
                                                 <div class="px-3">
-                                                    <span><i class="fas fa-map-marker-alt"></i>${pro.tenTour}</span>
+                                                    <span>
+                                                        <i class="fas fa-map-marker-alt"></i>${pro.tenTour}
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,9 +112,12 @@
                                         </div>
                                         <div class="gia d-flex justify-content-between">
                                             <c:if test="${pro.soCho > 0}">
-                                                <span class="mt-auto ml-2">Còn: <span class="text-danger font-weight-bold">${pro.soCho}</span></span>
-                                                </c:if>
-                                                <c:if test="${pro.soCho <= 0}">
+                                                <span class="mt-auto ml-2">Còn: 
+                                                    <span class="text-danger font-weight-bold">${pro.soCho}
+                                                    </span>
+                                                </span>
+                                            </c:if>
+                                            <c:if test="${pro.soCho <= 0}">
                                                 <span class="mt-auto ml-2">Hết chỗ</span>
                                             </c:if>
                                             <span class="giaTien">${pro.gia}</span>

@@ -11,7 +11,10 @@
 <h1 class="text-center mt-3 text-success" data-aos="fade-down" data-aos-duration="1500">
     Thống kê số lượng tour
 </h1>
-<div>
+<h4 class="text-center my-3 text-success"  data-aos="fade-down" data-aos-duration="2000">
+    Top 10 số lượng tour nhiều nhất
+</h4>
+<div style="width: 500px; height: 500px; margin-left: auto; margin-right: auto">
     <canvas id="myChartSoLuong"></canvas>
 </div>
 <table class="table">

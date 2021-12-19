@@ -49,7 +49,7 @@ function bieuDoSoLuongTour(id, tourLabels = [], tourInfor = []) {
                 data: tourInfor,
                 backgroundColor: colors,
                 hoverOffset: 30,
-                cutout: 120,  
+                cutout: 55,  
             }]
     };
     

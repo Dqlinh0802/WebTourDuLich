@@ -7,6 +7,7 @@ package com.dql.repository.impl;
 
 import com.dql.pojos.Tour;
 import com.dql.repository.TourRepository;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -32,22 +33,26 @@ public class TourRepositoryImpl implements TourRepository{
     private LocalSessionFactoryBean sessionFactory;
     
     @Override
-    public List<Tour> getTours(String kw, int page) {
+    public List<Tour> getTours(String kw, int page, int gia) {
         Session session = this.sessionFactory.getObject().getCurrentSession();  
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Tour> query = builder.createQuery(Tour.class);
         
         Root root = query.from(Tour.class);
         query = query.select(root);
-
+        List<Predicate> predicates = new ArrayList<>();
         
         //%% -> chuyen thanh 1 dau khi xuong duoi
         if(kw != null){
-            Predicate p = builder.like(root.get("tenTour").as(String.class),
-                    String.format("%%%s%%", kw));
-            query = query.where(p);
+            predicates.add(builder.like(root.get("tenTour").as(String.class),
+                    String.format("%%%s%%", kw)));
+            
         }
-        
+        if(gia != -1){
+            predicates.add(builder.lessThanOrEqualTo(root.get("gia"), gia));
+            query = query.orderBy(builder.asc(root.get("gia")));
+        }
+        query = query.where(predicates.toArray(new Predicate[]{}));
         Query q = session.createQuery(query); 
         int maxPage = 18;
         q.setMaxResults(maxPage);

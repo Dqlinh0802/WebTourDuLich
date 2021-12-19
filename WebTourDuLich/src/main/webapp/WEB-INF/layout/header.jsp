@@ -73,7 +73,7 @@
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Tài khoản
                     </a>
-                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu text-center tai-khoan" aria-labelledby="navbarDropdownMenuLink">
                         <a class="btn btn-info mr-auto ml-auto" type="button" href="<c:url value="/dangNhap" />">Đăng nhập</a>
                         <div>
                             Chưa có tài khoản? <a href="<c:url value="/dangKy" />">Đăng kí</a> ngay

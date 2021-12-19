@@ -7,8 +7,10 @@ package com.dql.controllers;
 
 import com.dql.pojos.Tour;
 import com.dql.service.BinhLuanService;
+import com.dql.service.NguoiDungService;
 import com.dql.service.TourService;
 import com.dql.validator.TourValidator;
+import com.dql.validator.WebAppValidator;
 import java.util.Map;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,18 +37,12 @@ public class TourController {
     private BinhLuanService binhLuanService;
 //    @Autowired
 //    private TourValidator tourValidator;
+//
 //    @InitBinder
-//    public void initBinder(WebDataBinder binder){
+//    public void initBinder(WebDataBinder binder) {
 //        binder.setValidator(tourValidator);
 //    }
     
-//    @Autowired
-//    private WebAppValidator webAppValidator;
-//    
-//    @InitBinder
-//    public void initBinder(WebDataBinder binder){
-//        binder.setValidator(webAppValidator);
-//    }
     
     //Map dung để hứng tên của hình trên clou
     //lấy String img để lưu tên
@@ -55,14 +51,13 @@ public class TourController {
     
     @PostMapping("/nhanVien/themSuaTour")
     public String post(Model model,
-            @ModelAttribute(value = "tour") @Valid Tour tour, 
-            BindingResult result){
-        if(!result.hasErrors()){
+            @ModelAttribute(value = "tour") Tour tour){
+//        if(!result.hasErrors()){
             if(this.tourService.themHoacSua(tour) == true)
                 return "redirect:/dsTour";
             else
                 model.addAttribute("errMsg", "Có lỗi rồi!!!");
-        }
+//        }
         //neu that bai thi no dung o tour
         return "themSuaTour";
     }
