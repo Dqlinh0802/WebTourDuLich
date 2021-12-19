@@ -29,26 +29,34 @@ public class AdminController {
     @GetMapping("/admin/thongKeDoanhThuTour")
     public String thongKeDoanhThuTour(Model model,
             @RequestParam(required = false) Map<String, String> params) {
-        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
 
         Date ngayBD = null, ngayKT = null;
         try {
             String BD = params.getOrDefault("ngayBD", null);
             if (BD != null) {
-                ngayBD = f.parse(BD);
+                Date date1=new SimpleDateFormat("yyyy-MM").parse(BD);
+                ngayBD = date1;
             }
 
-            String KT = params.getOrDefault("ngayKT", null);
-            if (KT != null) {
-                ngayKT = f.parse(KT);
-            }
+//            String KT = params.getOrDefault("ngayKT", null);
+//            if (KT != null) {
+//                ngayKT = f.parse(KT);
+//            }
         } catch (ParseException ex) {
             ex.printStackTrace();
         }
 
         
-        model.addAttribute("thongKeTour", this.thongKeService.doanhThuTheoTour(ngayBD, ngayKT));
+        model.addAttribute("thongKeTour", this.thongKeService.doanhThuTheoTour(ngayBD));
 
         return "thongKeDoanhThuTour";
+    }
+    
+    @GetMapping("/admin/thongKeSoLuongTour")
+    public String thongSoLuongTour(Model model) {
+
+        model.addAttribute("thongKeSoLuongTour", this.thongKeService.soLuongTour());
+
+        return "thongKeSoLuongTour";
     }
 }

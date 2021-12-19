@@ -91,4 +91,9 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="css" value="/WebTourDuLich/css/adminCss.css"></put-attribute>
         <put-attribute name="content" value="/WEB-INF/jsp/thongKeDoanhThuTour.jsp"></put-attribute>
     </definition>
+    <definition name="thongKeSoLuongTour" extends="baseAdminLayout">
+        <put-attribute name="title" value="Quản lý số lượng"></put-attribute>
+        <put-attribute name="css" value="/WebTourDuLich/css/adminCss.css"></put-attribute>
+        <put-attribute name="content" value="/WEB-INF/jsp/thongKeSoLuongTour.jsp"></put-attribute>
+    </definition>
 </tiles-definitions>

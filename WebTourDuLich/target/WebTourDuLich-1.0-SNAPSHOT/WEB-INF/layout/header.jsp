@@ -14,7 +14,7 @@
     <div class="container header">
         <a class="navbar-brand" href="<c:url value="/" />">
             <img class="logo" src="<c:url value="/images/logoText.png"/>"
-                 alt="Logo" style="width:100px;">
+                 alt="Logo" style="width:100px;" />
         </a>
         <div class="navbar-toggler title">Du Lich</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -93,8 +93,11 @@
                             </c:if>
                             <c:if test="${nguoiDungDangNhap.anh == null || nguoiDungDangNhap.anh.startsWith('https') != true}">
                                 <div class="nguoi-dung">
-                                    <i class="fas fa-user"></i>
-                                    <span class="ml-2">${pageContext.request.userPrincipal.name}</span>
+                                    <a class="nav-link" 
+                                       href="#" id="navbarDropdownMenuLink2"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user"></i>
+                                    </a
                                 </div>
                             </c:if>
                             <div class="dropdown-menu quan-ly text-center" aria-labelledby="navbarDropdownMenuLink2">

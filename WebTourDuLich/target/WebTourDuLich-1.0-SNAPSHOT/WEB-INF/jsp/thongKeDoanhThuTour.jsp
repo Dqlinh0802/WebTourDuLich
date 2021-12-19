@@ -14,10 +14,10 @@
 <div class="d-flex justify-content-center form">
     <form action="" class="text-center">
         <div class="d-flex align-items-center mt-2 mb-2">
-            <!--<input type="month" name="ngay" class="form-control"/>-->
-            <input type="date" name="ngay" class="form-control"/>
+            <input type="month" name="ngayBD" class="form-control" />
+<!--            <input type="date" name="ngayBD" class="form-control"/>
             <span class="mx-2">-</span>
-            <input type="date" name="ngayKT" class="form-control"/>
+            <input type="date" name="ngayKT" class="form-control"/>-->
         </div>
         <input type="submit" value="Thống kê" class="btn btn-info"/>
     </form>

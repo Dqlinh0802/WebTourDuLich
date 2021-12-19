@@ -16,7 +16,7 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <div class="nav-link p-0">
-                    <i class="fas fa-chevron-left" style="font-size: 12px;"></i> 
+                    <i class="fas fa-chevron-left" style="font-size: 20px;"></i> 
                     <a href="<c:url value="/" />">Trở về trang chủ</a>
                 </div>
             </li>

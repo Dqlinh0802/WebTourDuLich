@@ -146,8 +146,8 @@ function thanhToan(id, soLuongTour) {
             }).then(function (code) {
                 console.info(code);
                 location.reload();
-
             })
+            alert("Bạn đã đăng kí thành công");
         }
     }
     else

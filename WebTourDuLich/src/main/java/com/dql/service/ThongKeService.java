@@ -5,6 +5,7 @@
  */
 package com.dql.service;
 
+import com.dql.pojos.Tour;
 import java.util.Date;
 import java.util.List;
 
@@ -13,5 +14,7 @@ import java.util.List;
  * @author Acer
  */
 public interface ThongKeService {
-    List<Object[]> doanhThuTheoTour(Date ngayBD, Date ngayKT);
+//    List<Object[]> doanhThuTheoTour(Date ngayBD, Date ngayKT);
+    List<Object[]> doanhThuTheoTour(Date ngayBD);
+    List<Tour> soLuongTour();
 }

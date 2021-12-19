@@ -168,13 +168,13 @@ body{
     height: 53px;
 }
 .fa-user{
-    color: #f2c26f;
+    color: #000;
 }
 .nguoi-dung{
-    color: #fff;
+    color: #000;
     font-size: 20px;
     font-weight: 600;
-    border: 1px solid #f2c26f;
+    border: 1px solid #000;
     padding: 5px 5px;
     border-radius: 5px; 
 }

@@ -15,13 +15,14 @@ h1{
 }
 .nav-item a, i{
     font-size: 20px;
-    color: rgba(40, 167, 69, 0.7) !important;
+    color: #000 !important;
     font-weight: 500;
 }
 .nav-item a:hover{
     font-size: 20px;
-    color: rgba(40, 167, 69, 1)  !important;
+    color: #fff!important;
     text-decoration: none;
+    text-shadow: -2px 2px 0px #6abfa5;
 }
 .bg-tb{
     background-color: #f27979!important;

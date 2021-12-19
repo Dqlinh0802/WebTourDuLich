@@ -5,6 +5,7 @@
  */
 package com.dql.service.impl;
 
+import com.dql.pojos.Tour;
 import com.dql.repository.ThongKeRepository;
 import com.dql.service.ThongKeService;
 import java.util.Date;
@@ -24,8 +25,13 @@ public class ThongKeServiceImpl implements ThongKeService{
     
     
     @Override
-    public List<Object[]> doanhThuTheoTour(Date ngayBD, Date ngayKT) {
-        return this.thongKeRepository.doanhThuTheoTour(ngayBD, ngayKT);
+    public List<Object[]> doanhThuTheoTour(Date ngayBD) {
+        return this.thongKeRepository.doanhThuTheoTour(ngayBD);
+    }
+
+    @Override
+    public List<Tour> soLuongTour() {
+        return this.thongKeRepository.soLuongTour();
     }
     
 }

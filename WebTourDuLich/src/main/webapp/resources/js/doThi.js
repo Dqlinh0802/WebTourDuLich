@@ -37,3 +37,29 @@ function bieuDoTour(id, tourLabels = [], tourInfor = []) {
     new Chart(bieuDo, config)
     
 }
+
+function bieuDoSoLuongTour(id, tourLabels = [], tourInfor = []) {
+    let colors = [];
+    for (let i = 0; i < tourLabels.length; i++)
+        colors.push(randColor());
+    const data = {
+        labels: tourLabels,
+        datasets: [{
+                label: 'Biểu đồ thống kê số lượng tour',
+                data: tourInfor,
+                backgroundColor: colors,
+                hoverOffset: 30,
+                cutout: 120,  
+            }]
+    };
+    
+    const config = {
+        type: 'doughnut',
+        data: data
+    };
+
+    let bieuDo = document.getElementById(id).getContext("2d");
+    
+    new Chart(bieuDo, config)
+    
+}

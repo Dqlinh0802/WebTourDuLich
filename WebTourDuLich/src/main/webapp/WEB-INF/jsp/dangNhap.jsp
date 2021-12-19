@@ -24,7 +24,7 @@
             </div>
             <c:if test="${param.error != null}">
                 <div class="alert alert-danger mt-3 mb-3">
-                    Đã có lỗi xảy ra
+                    Đã có lỗi xảy ra!
                 </div>
             </c:if>
             <c:if test="${param.accessDenied != null}">
