@@ -57,13 +57,13 @@
     <div class="bg-location">
         <div class="info-location" >
             <p class="" data-aos="fade-left" data-aos-duration="1500">
-                <span>" </span>
+                <span class="text-danger font-weight-bold">" </span>
                 Du lịch mang đến những trải nghiệm thực tế về cuộc sống,
                 về con người, về văn hóa, về ẩm thực… Bất cứ điều gì bạn quan tâm,
                 bạn yêu thích, bạn sẽ dễ dàng tìm thấy trong một chuyến đi.
                 Một vùng đất dù xa lạ hay quen thuộc đều sẽ làm tươi mới tâm hồn bạn để bạn thấy
                 cuộc sống vốn dĩ tươi đẹp cho dù bất cứ điều gì xảy ra.
-                <span> "</span>
+                <span class="text-danger font-weight-bold"> "</span>
             </p>
             <img  src="<c:url value="./images/duLich1.png" />" 
                   style="position: absolute; right: 0px; bottom: 0px; transform: rotateY(180deg);">
@@ -77,13 +77,13 @@
 <div class="bg-2" >
     <div class="info-location-2" style="position: absolute;">
         <p class="" data-aos="fade-right" data-aos-duration="1500">
-            <span>" </span>Là một con dân nước Việt Nam nhưng mấy ai 
+            <span class="text-danger font-weight-bold">" </span>Là một con dân nước Việt Nam nhưng mấy ai 
             đã đặt chân hết các vùng miền đất Việt tươi đẹp.
             Nếu có cơ hội bạn hãy đến top các địa điểm du lịch 
             nổi tiếng đẹp nhất ở Việt Nam bạn sẽ biết ở Việt 
             Nam có những thiên đường thật sự, truyền thống,
             văn hóa dân tộc được hòa quyện hoàn hảo với thiên
-            nhiên đất trời<span> "</span>
+            nhiên đất trời<span class="text-danger font-weight-bold"> "</span>
         </p>
         <img src="<c:url value="./images/duLich2.png" />" style="position: relative; right: 200px; bottom: 131px">
     </div>
