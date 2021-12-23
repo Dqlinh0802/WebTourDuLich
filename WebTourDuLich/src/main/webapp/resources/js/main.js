@@ -86,6 +86,12 @@ function  capNhatSLTour(obj, tourId, soCho) {
             slTour.innerText = data.slTour;
             let tongTien = document.getElementById("tongTien");
             tongTien.innerText = data.tongTien;
+            
+            var formatter = new Intl.NumberFormat('vi', {
+                style: 'currency',
+                currency: 'VND',
+            });
+            tongTien.innerText = formatter.format(tongTien.innerText);
         })
     } else {
         fetch("/WebTourDuLich/api/gioHang", {
@@ -149,8 +155,7 @@ function thanhToan(id, soLuongTour) {
             })
             alert("Bạn đã đăng kí thành công");
         }
-    }
-    else
+    } else
         alert("Bạn chưa đặt tour nào!!!");
 
 }

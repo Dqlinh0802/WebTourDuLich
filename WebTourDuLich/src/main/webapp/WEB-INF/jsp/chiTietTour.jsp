@@ -21,7 +21,7 @@
                         <img src="${tour.anh}" alt="anh" style="width: 710px; object-fit: cover"/>
                     </c:if>
                     <c:if test="${tour.anh == null || tour.anh.startsWith('https') == false}">
-                        <img class="img-fluid " src="<c:url value="/images/phongCanh3.jpg"/>" alt="${tour.tenTour}"/>
+                        <img class="img-fluid " src="<c:url value="/images/macDinh.gif"/>" alt="${tour.tenTour}"/>
                     </c:if>
                 </div>
                 <div class="col-md-4">

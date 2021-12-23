@@ -49,15 +49,15 @@ public class TourServiceImpl implements TourService {
                     tour.setAnh(a.getAnh());
                 }else{
                     Map m = this.cloudinary.uploader().upload(tour.getFile().getBytes(),
-                    ObjectUtils.asMap("resource_type", "auto"));
-            
+                            ObjectUtils.asMap("resource_type", "auto"));
+
                     tour.setAnh((String) m.get("secure_url"));
                 }
             } else {    //them
                 if (tour.getFile().getBytes().length != 0) {
                     Map m = this.cloudinary.uploader().upload(tour.getFile().getBytes(),
-                    ObjectUtils.asMap("resource_type", "auto"));
-            
+                            ObjectUtils.asMap("resource_type", "auto"));
+
                     tour.setAnh((String) m.get("secure_url"));
                 } else {
                     tour.setAnh("");
@@ -79,7 +79,5 @@ public class TourServiceImpl implements TourService {
     public boolean xoaTour(int tourId) {
         return this.tourRepository.xoaTour(tourId);
     }
-
-
 
 }
