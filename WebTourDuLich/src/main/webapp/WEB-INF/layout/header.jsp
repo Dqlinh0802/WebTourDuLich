@@ -59,7 +59,9 @@
                         <a class="nav-link" href="#lienHe">Liên hệ</a>
                     </li>
                 </sec:authorize>
-
+                 <li class="nav-item">
+                    <a class="nav-link" href="<c:url value="/tinTuc"/>">Tin tức</a>
+                </li>
             </ul>
             <div class="nav-item dropdown d-flex">
                 <div class="item-gio-hang">
