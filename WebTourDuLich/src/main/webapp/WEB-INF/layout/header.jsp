@@ -59,9 +59,12 @@
                         <a class="nav-link" href="#lienHe">Liên hệ</a>
                     </li>
                 </sec:authorize>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/tinTuc"/>">Tin tức</a>
                 </li>
+                <sec:authorize access="!hasAnyRole('ROLE_MANAGE', 'ROLE_ADMIN')">
+                    <div style="margin-right: 120px"></div>
+                </sec:authorize>
             </ul>
             <div class="nav-item dropdown d-flex">
                 <div class="item-gio-hang">

@@ -24,7 +24,17 @@
         </li>
     </ul>
     <div class="row">
-        <img class="logo col-5" src="<c:url value="/images/macDinh.gif"/>" />
-        <p class="col-6">Các tour được bình chọn nhiều nhất</p>
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
     </div>
 </div>
