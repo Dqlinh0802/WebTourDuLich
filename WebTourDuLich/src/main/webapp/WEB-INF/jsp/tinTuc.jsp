@@ -27,65 +27,81 @@
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Các tour hot trong năm 2021</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>123</span>
+                <p>Ẩm thực Việt Nam còn là một trong những lý do chính để níu chân du 
+                    khách trong nước và quốc tế. Mặc dù những món ăn này đã có mặt và xuất khẩu</p>
             </div>
         </div>
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>722</span>
+                <p>Dưới đây là những địa điểm du lịch miền Bắc hấp dẫn nhất năm 2022.
+                    Mong rằng qua bài viết này các bạn có thể tham khảo và lựa chọn một điểm đến phù</p>
             </div>
         </div>
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Các tour hot trong năm 2021</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>123</span>
+                <p>Ẩm thực Việt Nam còn là một trong những lý do chính để níu chân du 
+                    khách trong nước và quốc tế. Mặc dù những món ăn này đã có mặt và xuất khẩu</p>
             </div>
         </div>
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>722</span>
+                <p>Ẩm thực Việt Nam còn là một trong những lý do chính để níu chân du 
+                    khách trong nước và quốc tế. Mặc dù những món ăn này đã có mặt và xuất khẩu</p>
             </div>
         </div>
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Các tour hot trong năm 2021</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>123</span>
+                <p>Dưới đây là những địa điểm du lịch miền Bắc hấp dẫn nhất năm 2022.
+                    Mong rằng qua bài viết này các bạn có thể tham khảo và lựa chọn một điểm đến phù</p>
             </div>
         </div>
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>722</span>
+                <p>Ẩm thực Việt Nam còn là một trong những lý do chính để níu chân du 
+                    khách trong nước và quốc tế. Mặc dù những món ăn này đã có mặt và xuất khẩu</p>
             </div>
         </div>
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Các tour hot trong năm 2021</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>123</span>
+                <p>Dưới đây là những địa điểm du lịch miền Bắc hấp dẫn nhất năm 2022.
+                    Mong rằng qua bài viết này các bạn có thể tham khảo và lựa chọn một điểm đến phù</p>
             </div>
         </div>
         <div class="col-4 my-3">
             <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
             <div>
-                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <p class="font-weight-bold m-0" style="height: 60px">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
                 <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
-                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+                <i class="fas fa-eye" style="font-size: 18px"></i> <span>722</span>
+                <p>Dưới đây là những địa điểm du lịch miền Bắc hấp dẫn nhất năm 2022.
+                    Mong rằng qua bài viết này các bạn có thể tham khảo và lựa chọn một điểm đến phù</p>
             </div>
         </div>
     </div>
