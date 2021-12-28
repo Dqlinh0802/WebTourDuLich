@@ -24,17 +24,69 @@
         </li>
     </ul>
     <div class="row">
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
-        <img class="logo col-4 my-3" src="<c:url value="/images/macDinh.gif"/>" />
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+            </div>
+        </div>
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+            </div>
+        </div>
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+            </div>
+        </div>
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+            </div>
+        </div>
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+            </div>
+        </div>
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+            </div>
+        </div>
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold m-0">Các tour hot trong năm 2021</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>22/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>123</span>
+            </div>
+        </div>
+        <div class="col-4 my-3">
+            <img class="logo img-fluid" src="<c:url value="/images/macDinh.gif"/>" />
+            <div>
+                <p class="font-weight-bold">Khám phá những món ăn đặc sản ngon nhất khi đi du lịch Việt Nam</p>
+                <i class="fas fa-calendar-alt" style="font-size: 18px"></i> <span>20/12/2021</span>
+                <i class="fas fa-calendar-eye" style="font-size: 18px"></i> <span>722</span>
+            </div>
+        </div>
     </div>
 </div>
