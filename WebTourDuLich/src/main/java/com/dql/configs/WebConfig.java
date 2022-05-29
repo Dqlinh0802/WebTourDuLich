@@ -53,7 +53,6 @@ public class WebConfig implements WebMvcConfigurer{
         resource.setViewClass(JstlView.class);
         resource.setPrefix("/WEB-INF/jsp/");
         resource.setSuffix(".jsp");
-
         return resource;
     }
     

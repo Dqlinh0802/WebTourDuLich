@@ -39,6 +39,8 @@ public class Tour implements Serializable {
     private String anh;
     private String moTa;
     private int soCho;
+    private String diemBD;
+    private String diemKT;
 
     @Transient
     private MultipartFile file;
@@ -205,6 +207,34 @@ public class Tour implements Serializable {
      */
     public void setChiTietHoaDons(List<ChiTietHoaDon> chiTietHoaDons) {
         this.chiTietHoaDons = chiTietHoaDons;
+    }
+
+    /**
+     * @return the diemBD
+     */
+    public String getDiemBD() {
+        return diemBD;
+    }
+
+    /**
+     * @param diemBD the diemBD to set
+     */
+    public void setDiemBD(String diemBD) {
+        this.diemBD = diemBD;
+    }
+
+    /**
+     * @return the diemKT
+     */
+    public String getDiemKT() {
+        return diemKT;
+    }
+
+    /**
+     * @param diemKT the diemKT to set
+     */
+    public void setDiemKT(String diemKT) {
+        this.diemKT = diemKT;
     }
 
 }

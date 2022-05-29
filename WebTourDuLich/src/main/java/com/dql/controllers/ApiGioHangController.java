@@ -113,7 +113,8 @@ public class ApiGioHangController {
     @PostMapping("/api/thanhToan/{id}")
     public HttpStatus thanhToan(HttpSession session,
             @PathVariable(value = "id") int id){
-        if(this.hoaDonService.themHoaDon((Map<Integer, GioHang>) session.getAttribute("gioHang"), id) == true) {
+        String tinhTrang = "Thanh toán trực tiếp";
+        if(this.hoaDonService.themHoaDon((Map<Integer, GioHang>) session.getAttribute("gioHang"), id, tinhTrang) == true) {
             session.removeAttribute("gioHang");
             return HttpStatus.OK;
         }

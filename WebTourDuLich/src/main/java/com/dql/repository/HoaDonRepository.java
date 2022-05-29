@@ -13,5 +13,5 @@ import java.util.Map;
  * @author Acer
  */
 public interface HoaDonRepository {
-    boolean themHoaDon(Map<Integer, GioHang> gioHang, int id);
+    boolean themHoaDon(Map<Integer, GioHang> gioHang, int id, String tinhTrang);
 }

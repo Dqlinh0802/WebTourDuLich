@@ -22,9 +22,9 @@ public class HoaDonServiceImpl implements HoaDonService{
     private HoaDonRepository hoaDonRepository;
     
     @Override
-    public boolean themHoaDon(Map<Integer, GioHang> gioHang, int id) {
+    public boolean themHoaDon(Map<Integer, GioHang> gioHang, int id, String tinhTrang) {
         if(gioHang != null)
-            return this.hoaDonRepository.themHoaDon(gioHang, id);
+            return this.hoaDonRepository.themHoaDon(gioHang, id, tinhTrang);
         return false;
     }
     

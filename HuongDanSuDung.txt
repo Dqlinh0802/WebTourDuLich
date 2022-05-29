@@ -1,0 +1,38 @@
+1.Các phiên bản cài đặt
+ Apache NetBeans IDE 12.3
+ JDK 1.8 
+2. Trước khi chạy ứng dụng
+ Chỉnh sửa thông tin ở file databases.properties trong thư mục Test3\src\main\resources\
+
+ hibernate.connection.url=jdbc:mysql://localhost:3306/dulich1db
+ hibernate.connection.username= tên database của người dùng
+ hibernate.connection.password= mật khẩu 
+
+3. Hướng dẫn sử dụng ứng dụng
+ 3.1 Tài khoản(có 3 loại tài khoản)
+ |   Vai trò  | tên tài khoản | mật khẩu |
+ =========================================
+ | Khách hàng |     ngan      |    1     |
+ | Nhân viên  |     bao	      |    1     |
+ | admin      |     admin     |   123    |
+ =========================================
+ 3.2 Nếu không đăng nhập: 
+  + Có thể xem danh sách các tour du lịch ở Mục Tour hoặc ấn vào Xem tour, Đặt tour.
+  + Có thể xem chi tiết tour, bình luận bằng cách clink vào 1 tour bất kỳ.
+  + Để đăng ký tài khoản (Ấn vào Tài khoản -> Đăng ký)
+ 3.3 Đăng nhập vào ứng dụng:
+  Ấn vào Tài khoản -> Đăng nhập
+  3.3.1 Đăng nhập với tài khoản khách hàng
+   + Để đặt tour (Ấn vào Tour -> Đặt ngay)
+   + Để tìm kiếm (Ấn vào Tour -> Tìm kiếm)
+   + Để đặt thanh toán (Ấn vào biểu tượng giỏ hàng -> Đặt ngay)
+  3.3.2 Đăng nhập với tài khoản nhân viên
+   + Để xem danh sách người dùng (Ấn vào Quản lý -> Người dùng).
+   + Để thêm tour (Ấn vào Quản lý -> Thêm tour).
+   + Để sửa thông tin 1 tour (Ấn vào biểu tượng cờ lê).
+   + Để xem danh sách đặt tour (Ấn vào Quản lý -> Đặt tour).
+  3.3.3 Đăng nhập với tài khoản admin
+   + Để xóa tour (Ấn vào biểu tượng thùng rác)
+   + Để thêm một tài khoản (Ấn vào Quản lý -> Người dùng -> Thêm người dùng).
+   + Để xem thống kê (Ấn vào Thống kê).
+ 

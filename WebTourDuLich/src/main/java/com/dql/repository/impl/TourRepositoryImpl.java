@@ -5,6 +5,7 @@
  */
 package com.dql.repository.impl;
 
+import com.dql.pojos.ChiTietHoaDon;
 import com.dql.pojos.Tour;
 import com.dql.repository.TourRepository;
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class TourRepositoryImpl implements TourRepository{
         }
         query = query.where(predicates.toArray(new Predicate[]{}));
         Query q = session.createQuery(query); 
-        int maxPage = 18;
+        int maxPage = 9;
         q.setMaxResults(maxPage);
         //page= 1 thì lấy 18 phần tử đầu 
         q.setFirstResult((page - 1 ) * maxPage);
@@ -110,6 +111,31 @@ public class TourRepositoryImpl implements TourRepository{
         Session session = this.sessionFactory.getObject().getCurrentSession();
         Query q = session.createQuery("Select Count(*) From Tour");
         return Long.parseLong(q.getSingleResult().toString());
+    }
+
+    @Override
+    public List<Object[]> getHotTours(int num) {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Object[]> query = builder.createQuery(Object[].class);
+        Root rootT = query.from(Tour.class);
+        Root rootC = query.from(ChiTietHoaDon.class);
+        
+        query = query.where(builder.equal(rootC.get("tour"), rootT.get("tourId")));
+        query.multiselect(rootT.get("tourId"), rootT.get("tenTour")
+                , rootC.get("gia"), rootT.get("anh"), rootT.get("soCho")
+                , builder.count(rootT.get("tourId")));
+        
+        
+        query = query.groupBy(rootT.get("tourId"));
+        query = query.orderBy(builder.desc(builder.count(rootT.get("tourId"))));
+        
+        Query q = session.createQuery(query);
+        q.setMaxResults(num);
+        
+        
+        return q.getResultList();
     }
 
 

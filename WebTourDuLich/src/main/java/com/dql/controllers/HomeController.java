@@ -29,41 +29,48 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @ControllerAdvice
 public class HomeController {
+
+    private final int MAX_HOT_TOUR = 6;
+    private final String PAGE_BAT_DAU = "1";
+    private final String PAGE_KET_THUC = "-1";
+
     
     @Autowired
     private LocalSessionFactoryBean sessionFactory;
     @Autowired
     private TourService tourService;
-    
-    
+
     @RequestMapping("/")
     public String index(Model model) {
 
         return "index";
     }
+
     @RequestMapping("/dsTour")
     public String dsTour(Model model,
-            @RequestParam(required = false) Map<String , String> params) {
-        
-        
+            @RequestParam(required = false) Map<String, String> params) {
+
         //co thì lấy k có thì lấy 1
-        int page = Integer.parseInt(params.getOrDefault("page", "1"));
-        int giaTu = Integer.parseInt(params.getOrDefault("tu", "-1"));
-        int den = Integer.parseInt(params.getOrDefault("den", "-1"));
+        int page = Integer.parseInt(params.getOrDefault("page", PAGE_BAT_DAU));
+        int giaTu = Integer.parseInt(params.getOrDefault("tu", PAGE_KET_THUC));
+        int den = Integer.parseInt(params.getOrDefault("den", PAGE_KET_THUC));
         model.addAttribute("tours", this.tourService.getTours(params.get("kw"), page, giaTu, den));
         model.addAttribute("slTour", this.tourService.slTour());
+
+        model.addAttribute("hotTours", this.tourService.getHotTours(MAX_HOT_TOUR));
         
         return "dsTour";
     }
-    
+
     //dung chung
     //phai ep kieu 
     @ModelAttribute
-    public void dungChung(Model model, HttpSession session){
+    public void dungChung(Model model, HttpSession session) {
         model.addAttribute("demSLTour", Utils.demSLTour((Map<Integer, GioHang>) session.getAttribute("gioHang")));
         model.addAttribute("nguoiDungDangNhap", session.getAttribute("nguoiDungDangNhap"));
+        model.addAttribute("scraping", Utils.Scraping("https://dulichvietnam.com.vn/cam-nang-trong-nuoc.html"));
+        model.addAttribute("scrapingNguoiNoiTieng", Utils.Scraping("https://dulichvietnam.com.vn/sao-va-du-lich.html"));
+        model.addAttribute("scrapingVideo", Utils.ScrapingVideo("https://dulichvietnam.com.vn/videos.html"));
     }
-    
-   
-    
+
 }

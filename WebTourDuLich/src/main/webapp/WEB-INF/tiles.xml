@@ -82,6 +82,16 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="css" value="/WebTourDuLich/css/tinTuc.css"></put-attribute>
         <put-attribute name="content" value="/WEB-INF/jsp/tinTuc.jsp"></put-attribute>
     </definition>
+    <definition name="paypal" extends="baseLayout">
+        <put-attribute name="title" value="Thanh toán"></put-attribute>
+        <!--<put-attribute name="css" value="/WebTourDuLich/css/tinTuc.css"></put-attribute>-->
+        <put-attribute name="content" value="/WEB-INF/jsp/thanhToan.jsp"></put-attribute>
+    </definition>
+    <definition name="thanhToanHoanTat" extends="baseLayout">
+        <put-attribute name="title" value="Thanh toán hoàn tất"></put-attribute>
+        <!--<put-attribute name="css" value="/WebTourDuLich/css/tinTuc.css"></put-attribute>-->
+        <put-attribute name="content" value="/WEB-INF/jsp/thanhToanHoanTat.jsp"></put-attribute>
+    </definition>
     <!--admin-->
     <definition name="baseAdminLayout" template="/WEB-INF/layout/baseAdmin.jsp">
         <put-attribute name="title" value="Quản trị hệ thống"></put-attribute>

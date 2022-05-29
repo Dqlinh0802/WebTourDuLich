@@ -86,12 +86,13 @@ function  capNhatSLTour(obj, tourId, soCho) {
             slTour.innerText = data.slTour;
             let tongTien = document.getElementById("tongTien");
             tongTien.innerText = data.tongTien;
-            
+
             var formatter = new Intl.NumberFormat('vi', {
                 style: 'currency',
                 currency: 'VND',
             });
             tongTien.innerText = formatter.format(tongTien.innerText);
+            location.reload();
         })
     } else {
         fetch("/WebTourDuLich/api/gioHang", {
@@ -138,22 +139,44 @@ function xoaTourTrongGio(tourId) {
         })
     }
 }
-function thanhToan(id, soLuongTour) {
+function thanhToan(id, soLuongTour, online, thanhToanOnline) {
     event.preventDefault();
     if (soLuongTour != 0) {
-        if (confirm("Tiến hành thanh toán!!!") == true) {
-            fetch(`/WebTourDuLich/api/thanhToan/${id}`, {
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }).then(function (res) {
-                return res.json()
-            }).then(function (code) {
-                console.info(code);
-                location.reload();
-            })
-            alert("Bạn đã đăng kí thành công");
+        if (online == true) {
+            let page = "/WebTourDuLich/paypal?tongTien=" + thanhToanOnline;
+            window.location = page;
+            if (confirm("Tiến hành thanh toán!!!") == true) {
+                fetch(`/WebTourDuLich/api/thanhToanOnline/${id}`, {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }).then(function (res) {
+                    return res.json()
+                }).then(function (code) {
+                    console.info(code);
+                    location.reload();
+                })
+                alert("Bạn đã đăng kí thành công");
+            }
+        } else {
+
+            if (confirm("Tiến hành thanh toán!!!") == true) {
+                fetch(`/WebTourDuLich/api/thanhToan/${id}`, {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }).then(function (res) {
+                    return res.json()
+                }).then(function (code) {
+                    console.info(code);
+                    location.reload();
+                    window.location = "/WebTourDuLich/dsTour";
+                })
+                alert("Bạn đã đăng kí thành công");
+                
+            }
         }
     } else
         alert("Bạn chưa đặt tour nào!!!");

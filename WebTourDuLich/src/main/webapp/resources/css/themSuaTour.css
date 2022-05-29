@@ -11,7 +11,7 @@ and open the template in the editor.
 
 #bg-tour{
     padding-top: 100px;
-    background-color: #383A59;
+    /*background-color: #383A59;*/
     padding-bottom: 100px;
 }
 #bg-tour h1{
@@ -21,7 +21,7 @@ and open the template in the editor.
 .info-tour input{
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 40px;
-    color: white;
+    color: black;
     min-width: 400px;
     height: 50px;
     border-color: rgba(255, 255, 255, 0) !important;
@@ -33,7 +33,7 @@ and open the template in the editor.
     border-color: white !important;
     border-width: 2px;
     border-style: solid;
-    color: #fff;
+    color: black;
 }
 .info-tour input::placeholder { 
     color: rgba(255, 255, 255, 0.9);
@@ -43,7 +43,7 @@ input.so-luong.text-center {
 }
 .info-tour label{
     font-size: 20px;
-    color: #fff !important;
+    color: black !important;
     font-weight: 400;
     margin-top: auto;
     margin-bottom: auto;
@@ -80,7 +80,7 @@ label.text-white {
 }
 #tour textarea{
     background: transparent;
-    color: white;
+    color: black;
     padding: 7px 10px;
 }
 .thanh-toan{

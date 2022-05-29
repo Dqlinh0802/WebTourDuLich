@@ -6,15 +6,21 @@
 package com.dql.controllers;
 
 import com.dql.service.ThongKeService;
+import com.dql.utils.PdfDoanhThu;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
@@ -30,7 +36,7 @@ public class AdminController {
     public String thongKeDoanhThuTour(Model model,
             @RequestParam(required = false) Map<String, String> params) {
 
-        Date ngayBD = null, ngayKT = null;
+        Date ngayBD = null;
         try {
             String BD = params.getOrDefault("ngayBD", null);
             if (BD != null) {
@@ -58,5 +64,18 @@ public class AdminController {
         model.addAttribute("thongKeSoLuongTour", this.thongKeService.soLuongTour());
 
         return "thongKeSoLuongTour";
+    }
+    
+    @RequestMapping(value = "/report", method=RequestMethod.GET)
+    public ModelAndView userListReport(HttpServletRequest req, HttpServletResponse res) {
+
+        String typeReport = req.getParameter("type");
+
+
+        if(typeReport != null && typeReport.equals("pdf")){
+            return new ModelAndView(new PdfDoanhThu(), "list", thongKeService.doanhThuTheoTour(null));
+        }
+
+        return new ModelAndView("", "list", thongKeService.doanhThuTheoTour(null));
     }
 }

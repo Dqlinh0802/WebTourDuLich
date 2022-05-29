@@ -14,6 +14,7 @@ import java.util.List;
  */
 public interface TourService {
     List<Tour> getTours(String kw, int page, int giaTu, int den);
+    List<Object[]> getHotTours(int num);
     Tour layTourId(int tourId);
     long slTour();
     boolean xoaTour(int tourId);

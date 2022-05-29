@@ -11,9 +11,9 @@
 
     <div class="khong-tim-thay">
         <div class="khong-tim-thay-404">
-            <h1>Hệ thống đang nâng cấp</h1>
+            <h1>Payment Error</h1>
         </div>
-        <p class="text-uppercase">Hệ thống đang nâng cấp</p>
+        <p class="text-uppercase">${errorMessage}</p>
         <a href="<c:url value="/"/>">Trở về trang chủ</a>
     </div>
 </div>

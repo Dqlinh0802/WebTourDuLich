@@ -6,6 +6,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 
 <h1 class="text-center mt-3 text-success" data-aos="fade-down" data-aos-duration="1500">
@@ -15,9 +16,9 @@
     <form action="" class="text-center">
         <div class="d-flex align-items-center mt-2 mb-2">
             <input type="month" name="ngayBD" class="form-control" />
-<!--            <input type="date" name="ngayBD" class="form-control"/>
-            <span class="mx-2">-</span>
-            <input type="date" name="ngayKT" class="form-control"/>-->
+            <!--            <input type="date" name="ngayBD" class="form-control"/>
+                        <span class="mx-2">-</span>
+                        <input type="date" name="ngayKT" class="form-control"/>-->
         </div>
         <input type="submit" value="Thống kê" class="btn btn-info"/>
     </form>
@@ -25,6 +26,8 @@
 <div style="margin-left: auto; margin-right: auto">
     <canvas id="myChart"></canvas>
 </div>
+<spring:url value="/report/?type=pdf" var="pdfURL" />
+<a class="btn btn-info" href="${pdfURL }">Xuất file PDF</a> 
 <table class="table">
     <tr class="text-white h5 bg-tb">
         <th class="text-center">Mã tour</th>
@@ -63,6 +66,6 @@
             gia[i].innerText = formatter.format(gia[i].innerText);
         }
     }
-    
+
     AOS.init();
 </script>

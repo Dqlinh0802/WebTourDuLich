@@ -80,4 +80,10 @@ public class TourServiceImpl implements TourService {
         return this.tourRepository.xoaTour(tourId);
     }
 
+    @Override
+    public List<Object[]> getHotTours(int num) {
+       return this.tourRepository.getHotTours(num);
+    }
+
+
 }

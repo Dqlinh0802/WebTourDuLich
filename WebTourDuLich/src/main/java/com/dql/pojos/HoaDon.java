@@ -30,13 +30,13 @@ import javax.persistence.Table;
 public class HoaDon implements Serializable {
 
 
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")//****
     private int id;
     private BigDecimal tongTien;
     private Date ngayMua;
+    private String tinhTrang;
 
     
     //NguoiDung
@@ -128,6 +128,21 @@ public class HoaDon implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+        /**
+     * @return the tinhTrang
+     */
+    public String getTinhTrang() {
+        return tinhTrang;
+    }
+
+    /**
+     * @param tinhTrang the tinhTrang to set
+     */
+    public void setTinhTrang(String tinhTrang) {
+        this.tinhTrang = tinhTrang;
+    }
+
+
     
     
 }

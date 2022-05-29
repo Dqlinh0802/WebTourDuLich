@@ -42,7 +42,7 @@ public class HoaDonRepositoryImpl implements HoaDonRepository {
     @Override
     //do cap nhat nhieu giao tac
     @Transactional(propagation = Propagation.REQUIRED)
-    public boolean themHoaDon(Map<Integer, GioHang> gioHang, int id) {
+    public boolean themHoaDon(Map<Integer, GioHang> gioHang, int id, String tinhTrang) {
         try {
             Session session = sessionFactory.getObject().getCurrentSession();
 
@@ -52,7 +52,7 @@ public class HoaDonRepositoryImpl implements HoaDonRepository {
             hoaDon.setNguoiDung(this.nguoiDungRepository.layNguoiDungId(id));
 
             hoaDon.setNgayMua(new Date());
-
+            hoaDon.setTinhTrang(tinhTrang);
 
             Map<String, String> tinhTien = Utils.tinhTien(gioHang);
             hoaDon.setTongTien(BigDecimal.valueOf(Long.parseLong(tinhTien.get("tongTien"))));

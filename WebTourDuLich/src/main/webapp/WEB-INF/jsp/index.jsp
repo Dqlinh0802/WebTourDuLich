@@ -20,10 +20,10 @@
     <!-- The slideshow -->
     <div class="carousel-inner ">
         <div class="carousel-item active">
-            <img src="<c:url value="./images/slider1.jpg" />" alt="haNoi" style="height: 700px; width: 100%; object-fit: cover">
+            <img src="<c:url value="./images/slider1.jpg" />" alt="daLat" style="height: 700px; width: 100%; object-fit: cover">
             <div class="carousel-caption">
-                <h3>Hà Nội</h3>
-                <p>Kiến trúc trăm tuổi và nền văn hóa phong phú!</p>
+                <h3>Đà Lạt</h3>
+                <p>Thàng phố mộng mơ</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -34,10 +34,10 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="<c:url value="./images/slider3.jpg" />" alt="saiGon" style="height: 700px; width: 100%; object-fit: cover">
+            <img src="<c:url value="./images/slider3.jpg" />" alt="vungTau" style="height: 700px; width: 100%; object-fit: cover">
             <div class="carousel-caption">
-                <h3>Sài Gòn</h3>
-                <p>Hòn ngọc Viễn Đông!</p>
+                <h3>Vũng Tàu</h3>
+                <p>Thành phố biển!</p>
             </div>
         </div>
     </div>
