@@ -1,0 +1,9 @@
+1. cải thiện việc tích hợp tìm kiếm
+2. chuyển trang đúng
+3. lưu thông tin token của người thanh toán paypal
+4. bình luận dùng js để load page(nhanh hơn)
+5. xuất pdf hóa đơn nếu người dùng muốn
+6. sửa quyền của người dùng
+7. xóa 1 tour mà tour đó có khách đặt tour đó.(xóa)
+8. mình chưa xem được các vé mình đã đặt
+9. file pdf mô tả.
